@@ -1,5 +1,6 @@
 ﻿
 using UnityEngine;
+using System;
 
 [RequireComponent(typeof(PlayerMotor))]
 public class PlayerController : MonoBehaviour
@@ -12,6 +13,9 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private float mouseSensitivityY = 10f;
+
+    [SerializeField]
+    private float jumpForce = 1000f;
 
 
 
@@ -46,7 +50,20 @@ public class PlayerController : MonoBehaviour
 
         Vector3 cameraRotation = new Vector3(xRot, 0, 0) * mouseSensitivityY;
         motor.CameraRotate(cameraRotation);
-       
+
+
+        //Player jump calcul
+        Vector3 jumpVelocity = Vector3.zero;
+
+        if (Input.GetButton("Jump"))
+        {
+
+            jumpVelocity = Vector3.up * jumpForce;
+        }
+
+        motor.ApplyJump(jumpVelocity);
+
+
 
     }
 }

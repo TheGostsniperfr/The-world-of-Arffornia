@@ -12,6 +12,7 @@ public class PlayerSetup : NetworkBehaviour
     {
         if (!isLocalPlayer)
         {
+            // On va boucler sur les différents composants renseignés et les désactiver si ce joueur n'est pas le notre
             for (int i = 0; i < componentsToDisable.Length; i++)
             {
                 componentsToDisable[i].enabled = false;
@@ -20,8 +21,7 @@ public class PlayerSetup : NetworkBehaviour
         else
         {
             sceneCamera = Camera.main;
-
-            if(sceneCamera == null)
+            if (sceneCamera != null)
             {
                 sceneCamera.gameObject.SetActive(false);
             }
@@ -30,7 +30,10 @@ public class PlayerSetup : NetworkBehaviour
 
     private void OnDisable()
     {
-        sceneCamera.gameObject.SetActive(true);
-
+        if (sceneCamera != null)
+        {
+            sceneCamera.gameObject.SetActive(true);
+        }
     }
 }
+
