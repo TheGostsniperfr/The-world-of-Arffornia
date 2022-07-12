@@ -9,13 +9,15 @@ public class PlayerController : MonoBehaviour
     private float speed = 3f;
 
     [SerializeField]
-    private float mouseSensitivityX = 10f;
+    private float mouseSensitivityX = 5f;
 
     [SerializeField]
-    private float mouseSensitivityY = 10f;
+    private float mouseSensitivityY = 5f;
+
+    
 
     [SerializeField]
-    private float jumpForce = 1000f;
+    private bool isGrounded = true;
 
 
 
@@ -53,17 +55,28 @@ public class PlayerController : MonoBehaviour
 
 
         //Player jump calcul
-        Vector3 jumpVelocity = Vector3.zero;
 
-        if (Input.GetButton("Jump"))
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
+            Debug.Log("key esapce pressed");
 
-            jumpVelocity = Vector3.up * jumpForce;
+            motor.jump();
+
+            isGrounded = false;
+
         }
+    }
 
-        motor.ApplyJump(jumpVelocity);
-
-
-
+    private void OnTriggerEnter(Collider collider)
+    {
+        if(collider.gameObject.tag == "floor")
+        {
+            Debug.Log("collision avec le sol");
+            isGrounded = true;
+        }
+        else
+        {
+            //isGrounded = false;
+        }
     }
 }

@@ -6,12 +6,14 @@ public class PlayerMotor : MonoBehaviour
     private Vector3 velocity;
     private Vector3 rotation;
     private Vector3 cameraRotation;
-    private Vector3 jumpVelocity;
 
     private Rigidbody rb;
 
     [SerializeField]
     private Camera cam;
+
+    [SerializeField]
+    private float jumpForce = 10f;
 
     private void Start()
     {
@@ -36,13 +38,10 @@ public class PlayerMotor : MonoBehaviour
         cameraRotation = _cameraRotation;
     }
 
-    public void ApplyJump(Vector3 _jumpVelocity)
-    {
-        jumpVelocity = _jumpVelocity;
-    }
+  
 
 
-    private void FixedUpdate()
+    private void Update()
     {
         PerformMovement();
         PerformRotation();
@@ -52,13 +51,17 @@ public class PlayerMotor : MonoBehaviour
     {
         if(velocity != Vector3.zero)
         {
-            rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
+            rb.MovePosition(rb.position + velocity * Time.deltaTime);
         }
 
-        if(jumpVelocity != Vector3.zero)
-        {
-            rb.AddForce(jumpVelocity);
-        }
+        
+
+
+    }
+
+    public void jump()
+    {
+        rb.AddForce(new Vector3(0f, jumpForce, 0f), ForceMode.Acceleration);
     }
 
 

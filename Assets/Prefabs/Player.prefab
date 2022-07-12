@@ -274,17 +274,19 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4138484006171053773}
-  - component: {fileID: 4138484006171053762}
   - component: {fileID: 4138484006171053774}
   - component: {fileID: 4138484006171053775}
   - component: {fileID: 4138484006171053772}
+  - component: {fileID: 5265166353935666989}
   - component: {fileID: 5910429543918454705}
   - component: {fileID: 2092406504820406712}
   - component: {fileID: -452230560909978418}
   - component: {fileID: 5582298602657414395}
   - component: {fileID: 8942514548097922944}
   - component: {fileID: 520750932090410837}
-  - component: {fileID: 8465517403495268477}
+  - component: {fileID: 6784843197891196415}
+  - component: {fileID: 8979508906403873674}
+  - component: {fileID: 8562115245448294409}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -309,19 +311,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &4138484006171053762
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4138484006171053763}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &4138484006171053774
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -351,6 +340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 4138484005632116927}
+  jumpForce: 900
 --- !u!114 &4138484006171053772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,9 +354,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  mouseSensitivityX: 10
-  mouseSensitivityY: 10
-  jumpForce: 100
+  mouseSensitivityX: 5
+  mouseSensitivityY: 5
+  isGrounded: 1
+--- !u!136 &5265166353935666989
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4138484006171053763}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.932431
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.05, z: 0}
 --- !u!114 &5910429543918454705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -445,7 +449,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4138484006171053763}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 1
@@ -504,7 +508,55 @@ MonoBehaviour:
   showOverlay: 0
   overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
   target: {fileID: 4138484005632116925}
---- !u!153 &8465517403495268477
+--- !u!136 &6784843197891196415
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4138484006171053763}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.47
+  m_Height: 1.8803222
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.09, z: 0}
+--- !u!114 &8979508906403873674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4138484006171053763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  clientAuthority: 0
+  sendInterval: 0.05
+  syncPosition: 1
+  syncRotation: 1
+  syncScale: 0
+  interpolatePosition: 1
+  interpolateRotation: 1
+  interpolateScale: 0
+  bufferTimeMultiplier: 1
+  bufferSizeLimit: 64
+  catchupThreshold: 4
+  catchupMultiplier: 0.1
+  onlySyncOnChange: 1
+  bufferResetMultiplier: 5
+  positionSensitivity: 0.01
+  rotationSensitivity: 0.01
+  scaleSensitivity: 0.01
+  showGizmos: 0
+  showOverlay: 0
+  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+--- !u!153 &8562115245448294409
 ConfigurableJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -563,9 +615,9 @@ ConfigurableJoint:
     maximumForce: 3.4028233e+38
   m_YDrive:
     serializedVersion: 3
-    positionSpring: 100
-    positionDamper: 5
-    maximumForce: 35
+    positionSpring: 50
+    positionDamper: 3
+    maximumForce: 25
   m_ZDrive:
     serializedVersion: 3
     positionSpring: 0
@@ -712,7 +764,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4138484006365270714
 Transform:
   m_ObjectHideFlags: 0
