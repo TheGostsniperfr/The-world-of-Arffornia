@@ -340,7 +340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraRotationLimit: 85
   cam: {fileID: 4138484005632116927}
-  jumpForce: 900
+  jumpForce: 1
 --- !u!114 &4138484006171053772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,6 +357,9 @@ MonoBehaviour:
   mouseSensitivityX: 5
   mouseSensitivityY: 5
   isGrounded: 1
+  jumpMaxTime: 0.15
+  isJumping: 0
+  PlayerCollider: {fileID: 6784843197891196415}
 --- !u!114 &5910429543918454705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498,7 +501,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 3.422, y: 0.58, z: 0.08}
+  m_ConnectedAnchor: {x: -1, y: 1, z: -3.41}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 2
@@ -547,7 +550,7 @@ ConfigurableJoint:
     serializedVersion: 3
     positionSpring: 100
     positionDamper: 0
-    maximumForce: 30
+    maximumForce: 50
   m_ZDrive:
     serializedVersion: 3
     positionSpring: 0

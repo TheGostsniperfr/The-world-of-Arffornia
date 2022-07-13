@@ -65,7 +65,7 @@ public class PlayerMotor : MonoBehaviour
 
     public void jump()
     {
-        rb.AddForce(new Vector3(0f, jumpForce, 0f), ForceMode.Acceleration);
+        rb.AddForce(new Vector3(0f, jumpForce, 0f), ForceMode.Impulse);
     }
 
 

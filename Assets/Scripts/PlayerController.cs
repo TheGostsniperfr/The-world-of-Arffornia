@@ -14,10 +14,23 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float mouseSensitivityY = 5f;
 
-    
-
     [SerializeField]
     private bool isGrounded = true;
+
+    //max time to jump
+    [SerializeField]
+    private float jumpMaxTime = 0.3f;
+
+    [SerializeField]
+    private bool isJumping = false;
+
+
+    //save time when jum started
+    private float jumpTimeStart;
+
+    
+
+    
 
 
 
@@ -54,16 +67,32 @@ public class PlayerController : MonoBehaviour
         motor.CameraRotate(cameraRotationX);
 
 
+
+
         //Player jump calcul
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        //player presses jump button and touched the ground
+        if (Input.GetButton("Jump") && (isGrounded || isJumping))
         {
-            Debug.Log("key esapce pressed");
+            Debug.Log("key espace pressed");
 
-            motor.jump();
 
-            isGrounded = false;
 
+            //if player start to pressed jump button:
+            if (isJumping == false)
+            {
+                isJumping = true;
+                jumpTimeStart = Time.time;
+
+                //player jump, so he quit the ground
+                isGrounded = false;
+            }     
+
+            //time juping calcul
+            if(Time.time < (jumpTimeStart + jumpMaxTime))
+            {
+                motor.jump();
+            }
         }
     }
 
@@ -73,10 +102,11 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("collision avec le sol");
             isGrounded = true;
+            isJumping=false;
         }
         else
         {
-            //isGrounded = false;
+            isGrounded = false;
         }
     }
 }
