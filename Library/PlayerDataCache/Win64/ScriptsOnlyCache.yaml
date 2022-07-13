@@ -79,7 +79,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5064}
     - Class: 114
-      Script: {instanceID: 20624}
+      Script: {instanceID: 5366}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 136
@@ -573,7 +573,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: bf9b17e2bf3de5c5af780d2cf57d78da
+      Hash: 648f718b92795b16052b0ac1813ef9f1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -675,7 +675,7 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: 06b346f249fccea31c99c65c2b8fd6af
+      Hash: 5d57c2c91f7674a481b07e72b2bf4a61
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMotor
@@ -1071,6 +1071,12 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 0f1da7a89e0c6e0417d18e57ca8920b4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerAttack
+  - hash:
+      serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -1099,12 +1105,6 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.NetworkRoom
     className: NetworkRoomPlayerExt
-  - hash:
-      serializedVersion: 2
-      Hash: 0f1da7a89e0c6e0417d18e57ca8920b4
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerAttack
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

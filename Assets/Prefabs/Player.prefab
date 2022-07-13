@@ -357,9 +357,10 @@ MonoBehaviour:
   mouseSensitivityX: 5
   mouseSensitivityY: 5
   isGrounded: 1
-  jumpMaxTime: 0.15
   isJumping: 0
-  PlayerCollider: {fileID: 6784843197891196415}
+  jumpTimeCounter: 0
+  jumpTime: 0.2
+  jumpForce: 8
 --- !u!114 &5910429543918454705
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,35 +5,37 @@ using System;
 [RequireComponent(typeof(PlayerMotor))]
 public class PlayerController : MonoBehaviour
 {
+
+    //Player speed var init
     [SerializeField]
     private float speed = 3f;
 
+
+    //Mouse sensi var init
     [SerializeField]
     private float mouseSensitivityX = 5f;
 
     [SerializeField]
     private float mouseSensitivityY = 5f;
 
+
+    //Jump var init
     [SerializeField]
     private bool isGrounded = true;
-
-    //max time to jump
-    [SerializeField]
-    private float jumpMaxTime = 0.3f;
 
     [SerializeField]
     private bool isJumping = false;
 
+    [SerializeField]
+    private float jumpTimeCounter;
 
-    //save time when jum started
-    private float jumpTimeStart;
+    [SerializeField]
+    private float jumpTime = 0.3f;
 
-    
+    [SerializeField]
+    private float jumpForce;
 
-    
-
-
-
+    private Vector3 jumpVelocity;
     private PlayerMotor motor;
 
     private void Start()
@@ -41,6 +43,7 @@ public class PlayerController : MonoBehaviour
         motor = GetComponent<PlayerMotor>();
     }
 
+    
     private void Update()
     {
         //Player velocity calcul
@@ -70,30 +73,43 @@ public class PlayerController : MonoBehaviour
 
 
         //Player jump calcul
+        jumpVelocity = Vector3.zero;
 
         //player presses jump button and touched the ground
-        if (Input.GetButton("Jump") && (isGrounded || isJumping))
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             Debug.Log("key espace pressed");
 
+            isJumping = true;
+            jumpTimeCounter = jumpTime;
+            jumpVelocity = Vector3.up * jumpForce;
 
 
-            //if player start to pressed jump button:
-            if (isJumping == false)
-            {
-                isJumping = true;
-                jumpTimeStart = Time.time;
-
-                //player jump, so he quit the ground
-                isGrounded = false;
-            }     
-
-            //time juping calcul
-            if(Time.time < (jumpTimeStart + jumpMaxTime))
-            {
-                motor.jump();
-            }
         }
+        if (isJumping && Input.GetButton("Jump")) 
+        { 
+            if(jumpTimeCounter > 0)
+            {
+                jumpVelocity = Vector3.up * jumpForce;
+                jumpTimeCounter -= Time.deltaTime;
+            }
+            else
+            {
+                isJumping=false;
+            }
+
+        }
+
+        if (Input.GetButtonUp("Jump"))
+        {
+            isJumping = false;
+        }
+
+        motor.JumpVelocity(jumpVelocity);
+
+
+
+
     }
 
     private void OnTriggerEnter(Collider collider)
@@ -109,4 +125,10 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
         }
     }
+
+    private void OnTriggerExit(Collider collider)
+    {
+        //isGrounded = false;
+    }
+
 }
