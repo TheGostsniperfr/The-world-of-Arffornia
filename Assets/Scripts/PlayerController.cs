@@ -50,8 +50,8 @@ public class PlayerController : MonoBehaviour
         Vector3 Playerrotation = new Vector3(0, yRot, 0) * mouseSensitivityX;
         motor.Rotate(Playerrotation);
 
-        Vector3 cameraRotation = new Vector3(xRot, 0, 0) * mouseSensitivityY;
-        motor.CameraRotate(cameraRotation);
+        float cameraRotationX = xRot * mouseSensitivityY;
+        motor.CameraRotate(cameraRotationX);
 
 
         //Player jump calcul

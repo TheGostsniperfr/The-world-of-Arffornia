@@ -339,9 +339,11 @@
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.Timeline.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/where-allocations.ref.dll"
+"Assets/Scripts/PlayerAttack.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/PlayerMotor.cs"
 "Assets/Scripts/PlayerSetup.cs"
+"Assets/Scripts/PlayerWeapon.cs"
 -langversion:9.0
 
 /deterministic

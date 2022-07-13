@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - PlayerAttack
     - PlayerController
     - PlayerMotor
     - PlayerSetup
@@ -19,7 +20,9 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
-  serializedClasses: {}
+  serializedClasses:
+    Assembly-CSharp:
+    - PlayerWeapon
   methodsToPreserve: []
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
@@ -66,22 +69,24 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3348}
     - Class: 114
-      Script: {instanceID: 3472}
+      Script: {instanceID: 3474}
     - Class: 114
-      Script: {instanceID: 3784}
+      Script: {instanceID: 3786}
     - Class: 114
-      Script: {instanceID: 4740}
+      Script: {instanceID: 4742}
     - Class: 114
-      Script: {instanceID: 4920}
+      Script: {instanceID: 4922}
     - Class: 114
-      Script: {instanceID: 5062}
+      Script: {instanceID: 5064}
+    - Class: 114
+      Script: {instanceID: 20624}
     - Class: 115
-      Script: {instanceID: 0}
-    - Class: 135
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
     - Class: 143
+      Script: {instanceID: 0}
+    - Class: 153
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -232,7 +237,7 @@ ScriptsOnlyBuild:
     className: HorizontalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 690c0b1a818ad97ab70908d6171d25eb
+      Hash: 781cddf76ed0d11b0ca96ec6dd487da7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerSetup
@@ -568,7 +573,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: daccae82115664fe520b7af4d88d39b4
+      Hash: bf9b17e2bf3de5c5af780d2cf57d78da
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -670,7 +675,7 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: 218048bd93e908746781901d78cf0f9b
+      Hash: 06b346f249fccea31c99c65c2b8fd6af
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMotor
@@ -1094,6 +1099,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.NetworkRoom
     className: NetworkRoomPlayerExt
+  - hash:
+      serializedVersion: 2
+      Hash: 0f1da7a89e0c6e0417d18e57ca8920b4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerAttack
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
