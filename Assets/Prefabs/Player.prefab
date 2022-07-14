@@ -484,7 +484,7 @@ MonoBehaviour:
   syncInterval: 0.1
   weapon:
     Name: Colt
-    domage: 10
+    domage: 50
     range: 100
   cam: {fileID: 4138484005632116927}
   mask:
@@ -644,6 +644,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99927161871d3a8448d89e5f7b0a72d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  maxHealth: 100
+  disableOnDeath:
+  - {fileID: 5167432388309691285}
+  - {fileID: 4138484006171053772}
 --- !u!1 &4138484006247967652
 GameObject:
   m_ObjectHideFlags: 0

@@ -27,6 +27,8 @@ public class PlayerSetup : NetworkBehaviour
             }
         }
 
+        GetComponent<Player>().Setup();
+
     }
 
     public override void OnStartClient()
@@ -61,4 +63,6 @@ public class PlayerSetup : NetworkBehaviour
 
         GameManager.UnRegisterPlayer(transform.name);
     }
+
+
 }

@@ -24,6 +24,7 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
   serializedClasses:
     Assembly-CSharp:
+    - GameSettings
     - PlayerWeapon
   methodsToPreserve: []
   sceneClasses:
@@ -69,23 +70,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2870}
     - Class: 114
-      Script: {instanceID: 3348}
+      Script: {instanceID: 3196}
     - Class: 114
-      Script: {instanceID: 3474}
+      Script: {instanceID: 3350}
     - Class: 114
-      Script: {instanceID: 3786}
+      Script: {instanceID: 3476}
     - Class: 114
-      Script: {instanceID: 4742}
+      Script: {instanceID: 3788}
     - Class: 114
-      Script: {instanceID: 4922}
+      Script: {instanceID: 3944}
     - Class: 114
-      Script: {instanceID: 5064}
+      Script: {instanceID: 4746}
     - Class: 114
-      Script: {instanceID: 5366}
+      Script: {instanceID: 4926}
     - Class: 114
-      Script: {instanceID: 20552}
+      Script: {instanceID: 5068}
     - Class: 114
-      Script: {instanceID: 20558}
+      Script: {instanceID: 5370}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 136
@@ -519,6 +520,12 @@ ScriptsOnlyBuild:
     className: AdditiveNetworkManager
   - hash:
       serializedVersion: 2
+      Hash: e3c87ff44c6d8c95adc94acce0d0d4a2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Player
+  - hash:
+      serializedVersion: 2
       Hash: 9c215ccf8a582b0adad8d45fa450d638
     assemblyName: Mirror.Authenticators.dll
     namespaceName: Mirror.Authenticators
@@ -739,6 +746,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: PositionAsUV1
+  - hash:
+      serializedVersion: 2
+      Hash: eaee8444969a4c9c025c31d4788ae562
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManager
   - hash:
       serializedVersion: 2
       Hash: 265cf1537361bce87401ba1fba27baf3
@@ -1111,18 +1124,6 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.NetworkRoom
     className: NetworkRoomPlayerExt
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameManager
-  - hash:
-      serializedVersion: 2
-      Hash: 768ba65441043f45a76213d2ac1360aa
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Player
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

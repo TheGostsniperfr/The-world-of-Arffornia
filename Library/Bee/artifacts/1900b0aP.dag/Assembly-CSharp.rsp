@@ -340,6 +340,7 @@
 -r:"Library/Bee/artifacts/1900b0aP.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/where-allocations.ref.dll"
 "Assets/Scripts/GameManager.cs"
+"Assets/Scripts/GameSettings.cs"
 "Assets/Scripts/Player.cs"
 "Assets/Scripts/PlayerAttack.cs"
 "Assets/Scripts/PlayerController.cs"
