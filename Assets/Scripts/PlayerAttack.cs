@@ -25,12 +25,12 @@ public class PlayerAttack : NetworkBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Debug.Log("clique gauche détecté");
-            Shoot();
+            Attack();
         }
     }
 
     [Client]
-    private void Shoot()
+    private void Attack()
     {
         RaycastHit hit;
 
@@ -38,15 +38,18 @@ public class PlayerAttack : NetworkBehaviour
         {
             if (hit.collider.tag == "Player")
             {
-                CmdPlayerShot(hit.collider.name);
+                CmdPlayerAttack(hit.collider.name, weapon.domage);
             }
         }
     }
 
     [Command]
-    private void CmdPlayerShot(string playerName)
+    private void CmdPlayerAttack(string playerName, float damage)
     {
         Debug.Log(playerName + "à été touché");
+
+        Player player = GameManager.GetPlayer(playerName);
+        player.TakeDamage(damage);
     }
 
 

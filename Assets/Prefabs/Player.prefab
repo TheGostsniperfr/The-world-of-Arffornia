@@ -286,6 +286,7 @@ GameObject:
   - component: {fileID: 5265166353935666989}
   - component: {fileID: 6784843197891196415}
   - component: {fileID: 8942514548097922944}
+  - component: {fileID: 4330042811440642156}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -340,7 +341,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraRotationLimit: 85
   cam: {fileID: 4138484005632116927}
-  jumpForce: 1
 --- !u!114 &4138484006171053772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -632,6 +632,18 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4330042811440642156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4138484006171053763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99927161871d3a8448d89e5f7b0a72d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4138484006247967652
 GameObject:
   m_ObjectHideFlags: 0

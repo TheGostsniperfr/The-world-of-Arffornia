@@ -1,6 +1,8 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - GameManager
+    - Player
     - PlayerAttack
     - PlayerController
     - PlayerMotor
@@ -80,6 +82,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 5064}
     - Class: 114
       Script: {instanceID: 5366}
+    - Class: 114
+      Script: {instanceID: 20552}
+    - Class: 114
+      Script: {instanceID: 20558}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 136
@@ -1105,6 +1111,18 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.NetworkRoom
     className: NetworkRoomPlayerExt
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManager
+  - hash:
+      serializedVersion: 2
+      Hash: 768ba65441043f45a76213d2ac1360aa
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Player
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
