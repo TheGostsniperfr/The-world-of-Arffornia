@@ -9,8 +9,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float speed = 3f;
     [SerializeField]
-    private float turnSmoothTime = 0.1f;
+    private float turnSmoothTime = 0.2f;
     private Vector3 Velocity;
+
+    [SerializeField]
+    private bool isSprinting = false;
+    [SerializeField]
+    private float speedSprintMultiplicator = 1.75f;
+    [SerializeField]
+    private float speedTurnSmoothMultiplicator = 0.5f;
 
 
 
@@ -24,7 +31,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private bool isJumping = false;
 
-    [SerializeField]
     private float jumpTimeCounter;
 
     [SerializeField]
@@ -49,6 +55,27 @@ public class PlayerController : MonoBehaviour
     {
         float xMov = Input.GetAxisRaw("Horizontal");
         float zMov = Input.GetAxisRaw("Vertical");
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !isSprinting)
+        {
+            isSprinting = true;
+            speed *= speedSprintMultiplicator;
+            turnSmoothTime *= speedTurnSmoothMultiplicator;
+        }
+        else
+        {
+            if (Input.GetKeyUp(KeyCode.LeftShift))
+            {
+                isSprinting = false;
+                speed /= speedSprintMultiplicator;
+                turnSmoothTime /= speedTurnSmoothMultiplicator;
+
+            }
+
+        }
+
+        
+
         Vector3 direction = new Vector3(xMov, 0f, zMov).normalized;
 
         if (direction.magnitude >= 0.1f)

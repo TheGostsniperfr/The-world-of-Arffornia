@@ -151,7 +151,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760572956443240476}
-  m_LocalRotation: {x: 0.20159715, y: 0.000000023833893, z: -0.000000004905564, w: 0.9794685}
+  m_LocalRotation: {x: 0.20159715, y: -0.000000023833891, z: 0.0000000049055635, w: 0.9794685}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -519,7 +519,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4138484005632116914}
-  m_LocalRotation: {x: 0.20159717, y: 0.000000024058822, z: -0.00000000485901, w: 0.9794685}
+  m_LocalRotation: {x: 0.20159717, y: -0.000000024058822, z: 0.00000000485901, w: 0.9794685}
   m_LocalPosition: {x: 0, y: 2.5, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -850,13 +850,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  turnSmoothTime: 0.1
+  turnSmoothTime: 0.2
+  isSprinting: 0
+  speedSprintMultiplicator: 1.75
+  speedTurnSmoothMultiplicator: 0.5
   characterController: {fileID: 8741707619534854585}
   cam: {fileID: 4138484005632116925}
   isJumping: 0
   jumpTimeCounter: 0
-  jumpTime: 0.3
-  jumpForce: 10
+  jumpTime: 0.15
+  jumpForce: 5
   gravity: -9.81
 --- !u!143 &8741707619534854585
 CharacterController:
@@ -1519,7 +1522,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8075344944827351553}
-  m_LocalRotation: {x: 0.17346148, y: -0.000000016945545, z: 0.0000000029846443, w: 0.9848407}
+  m_LocalRotation: {x: 0.17346148, y: 0.000000016945544, z: -0.000000002984644, w: 0.9848407}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
