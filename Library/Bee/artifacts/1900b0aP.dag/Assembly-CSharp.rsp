@@ -330,7 +330,6 @@
 -r:"Library/Bee/artifacts/1900b0aP.dag/kcp2k.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Mirror.Authenticators.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Mirror.Components.ref.dll"
--r:"Library/Bee/artifacts/1900b0aP.dag/Mirror.Examples.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Mirror.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/SimpleWebTransport.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Telepathy.ref.dll"

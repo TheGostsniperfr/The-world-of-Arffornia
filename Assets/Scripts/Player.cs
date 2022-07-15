@@ -4,49 +4,48 @@ using System.Collections;
 
 public class Player : NetworkBehaviour
 {
+    [SyncVar]
+    private bool _isDead = false;
+    public bool isDead
+    {
+        get { return _isDead; }
+        protected set { _isDead = value; }
+    }
+
     [SerializeField]
     private float maxHealth = 100f;
-    [SyncVar]
-    private bool _isAlive = true;
-    public bool isAlive
-    {
-        get { return _isAlive; }
-        protected set { _isAlive = value; }
-    }
 
     [SyncVar]
     private float currentHealth;
 
     [SerializeField]
     private Behaviour[] disableOnDeath;
-    private bool[] wasEnableOnStart; 
+    private bool[] wasEnabledOnStart;
+
+    public CharacterController characterController;
 
     public void Setup()
     {
-        wasEnableOnStart = new bool[disableOnDeath.Length];
+        wasEnabledOnStart = new bool[disableOnDeath.Length];
         for (int i = 0; i < disableOnDeath.Length; i++)
         {
-            wasEnableOnStart[i] = disableOnDeath[i].enabled;
+            wasEnabledOnStart[i] = disableOnDeath[i].enabled;
         }
+
         SetDefaults();
     }
 
-
     public void SetDefaults()
     {
-        isAlive = true;
+        isDead = false;
         currentHealth = maxHealth;
 
         for (int i = 0; i < disableOnDeath.Length; i++)
         {
-            disableOnDeath[i].enabled = wasEnableOnStart[i];
+            disableOnDeath[i].enabled = wasEnabledOnStart[i];
         }
 
-        Collider collider = GetComponent<Collider>();
-        if(collider != null)
-        {
-            collider.enabled = true;
-        }
+
     }
 
     private IEnumerator Respawn()
@@ -54,62 +53,56 @@ public class Player : NetworkBehaviour
         yield return new WaitForSeconds(GameManager.instance.gameSettings.respawnTimer);
         SetDefaults();
         Transform spawnPoint = NetworkManager.singleton.GetStartPosition();
-        transform.position = spawnPoint.position;
-        transform.rotation = spawnPoint.rotation;
+
+        characterController.enabled = false;
+        characterController.transform.position = spawnPoint.position;
+        characterController.transform.rotation = spawnPoint.rotation;
+        characterController.enabled = true;
+
     }
 
-
-    [ClientRpc ]
-    public void RpcTakeDomage(float domage)
+    private void Update()
     {
-        if (!isAlive)
+        if (!isLocalPlayer)
         {
             return;
         }
 
-        if(currentHealth - domage <= 0)
+        if (Input.GetKeyDown(KeyCode.K))
         {
-            //player Died
-            Die();
-            currentHealth = 0;
+            RpcTakeDamage(100);
         }
-        else
+    }
+
+    [ClientRpc]
+    public void RpcTakeDamage(float amount)
+    {
+        if (isDead)
         {
-            currentHealth -= domage;
+            return;
         }
 
-        Debug.Log(transform.name + " a : " + currentHealth + " HP");
+        currentHealth -= amount;
+        Debug.Log(transform.name + " a maintenant : " + currentHealth + " points de vies.");
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
     }
 
     private void Die()
     {
-        isAlive = false;
-        
+        isDead = true;
 
         for (int i = 0; i < disableOnDeath.Length; i++)
         {
             disableOnDeath[i].enabled = false;
         }
-        Debug.Log(transform.name + " a ete elemine !");
 
 
-        Collider collider = GetComponent<Collider>();
-        if (collider != null)
-        {
-            collider.enabled = false;
-        }
+        Debug.Log(transform.name + " a été éliminé.");
 
         StartCoroutine(Respawn());
-    }
-
-    private void Update()
-    {
-        if (isLocalPlayer)
-        {
-            if (Input.GetKeyDown(KeyCode.K))
-            {
-                RpcTakeDomage(100);
-            }
-        }
     }
 }

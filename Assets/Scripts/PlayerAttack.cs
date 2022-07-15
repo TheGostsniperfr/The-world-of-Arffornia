@@ -49,7 +49,7 @@ public class PlayerAttack : NetworkBehaviour
         Debug.Log(playerName + "à été touché");
 
         Player player = GameManager.GetPlayer(playerName);
-        player.RpcTakeDomage(damage);
+        player.RpcTakeDamage(damage);
     }
 
 

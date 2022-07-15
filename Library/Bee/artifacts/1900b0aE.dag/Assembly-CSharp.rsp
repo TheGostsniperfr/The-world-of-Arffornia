@@ -380,11 +380,11 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/where-allocations.ref.dll"
-"Assets/PlayerController.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/GameSettings.cs"
 "Assets/Scripts/Player.cs"
 "Assets/Scripts/PlayerAttack.cs"
+"Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/PlayerSetup.cs"
 "Assets/Scripts/PlayerWeapon.cs"
 -langversion:9.0
