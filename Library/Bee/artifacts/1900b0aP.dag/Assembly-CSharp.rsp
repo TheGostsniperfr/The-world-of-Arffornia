@@ -136,6 +136,7 @@
 -define:MIRROR_66_0_OR_NEWER
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
+-r:"C:/Users/brian/Documents/Informatique/Unity/The world of Arffornia/Library/PackageCache/com.unity.cinemachine@2.8.6/Runtime/ThirdParty/clipper_library.dll"
 -r:"C:/Users/brian/Documents/Informatique/Unity/The world of Arffornia/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/AOT/Newtonsoft.Json.dll"
 -r:"D:/Program Files/Unity Hub/Editor/2021.3.6f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/mscorlib.dll"
 -r:"D:/Program Files/Unity Hub/Editor/2021.3.6f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.ComponentModel.Composition.dll"
@@ -325,6 +326,7 @@
 -r:"D:/Program Files/Unity Hub/Editor/2021.3.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.VRModule.dll"
 -r:"D:/Program Files/Unity Hub/Editor/2021.3.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.WindModule.dll"
 -r:"D:/Program Files/Unity Hub/Editor/2021.3.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.XRModule.dll"
+-r:"Library/Bee/artifacts/1900b0aP.dag/Cinemachine.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/kcp2k.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Mirror.Authenticators.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Mirror.Components.ref.dll"
@@ -344,7 +346,6 @@
 "Assets/Scripts/Player.cs"
 "Assets/Scripts/PlayerAttack.cs"
 "Assets/Scripts/PlayerController.cs"
-"Assets/Scripts/PlayerMotor.cs"
 "Assets/Scripts/PlayerSetup.cs"
 "Assets/Scripts/PlayerWeapon.cs"
 -langversion:9.0

@@ -154,6 +154,7 @@
 -r:"Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Mdb.dll"
 -r:"Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Pdb.dll"
 -r:"Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll"
+-r:"C:/Users/brian/Documents/Informatique/Unity/The world of Arffornia/Library/PackageCache/com.unity.cinemachine@2.8.6/Runtime/ThirdParty/clipper_library.dll"
 -r:"C:/Users/brian/Documents/Informatique/Unity/The world of Arffornia/Library/PackageCache/com.unity.collab-proxy@1.15.18/Lib/Editor/PlasticSCM/log4netPlastic.dll"
 -r:"C:/Users/brian/Documents/Informatique/Unity/The world of Arffornia/Library/PackageCache/com.unity.collab-proxy@1.15.18/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll"
 -r:"C:/Users/brian/Documents/Informatique/Unity/The world of Arffornia/Library/PackageCache/com.unity.collab-proxy@1.15.18/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll"
