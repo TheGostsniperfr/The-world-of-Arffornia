@@ -43,11 +43,20 @@ public class PlayerController : MonoBehaviour
     private float gravity;
 
 
+    //Animator
+    private Animator anim;
+
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
 
     private void Update()
     {
         MovePlayer();
+
     }
 
 
@@ -61,6 +70,15 @@ public class PlayerController : MonoBehaviour
             isSprinting = true;
             speed *= speedSprintMultiplicator;
             turnSmoothTime *= speedTurnSmoothMultiplicator;
+
+            
+
+            if (!anim.GetBool("isSprinting"))
+            {
+                Debug.Log("isSprinting true");
+                anim.SetBool("isSprinting", true);
+            }
+
         }
         else
         {
@@ -70,13 +88,22 @@ public class PlayerController : MonoBehaviour
                 speed /= speedSprintMultiplicator;
                 turnSmoothTime /= speedTurnSmoothMultiplicator;
 
+                if (anim.GetBool("isSprinting"))
+                {
+                    Debug.Log("isSprinting false");
+                    anim.SetBool("isSprinting", false);
+                }
             }
+                
+            
 
         }
 
         
 
         Vector3 direction = new Vector3(xMov, 0f, zMov).normalized;
+
+        
 
         if (direction.magnitude >= 0.1f)
         {
@@ -87,7 +114,24 @@ public class PlayerController : MonoBehaviour
 
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             characterController.Move(moveDir.normalized * speed * Time.deltaTime);
+
+            if (!anim.GetBool("isWalking"))
+            {
+                Debug.Log("isWalking true");
+                anim.SetBool("isWalking", true);
+            }
         }
+        else
+        {
+
+            if (anim.GetBool("isWalking"))
+            {
+                Debug.Log("isWalking false");
+                anim.SetBool("isWalking", false);
+            }
+        }
+
+    
 
         if (characterController.isGrounded)
         {
@@ -100,6 +144,7 @@ public class PlayerController : MonoBehaviour
                 Velocity.y = jumpForce;
                 isJumping = true;
                 jumpTimeCounter = jumpTime;
+                anim.SetBool("isJumping", true);
 
             }
         }
@@ -118,6 +163,8 @@ public class PlayerController : MonoBehaviour
             else
             {
                 isJumping = false;
+                anim.SetBool("isJumping", false);
+
             }
 
         }
@@ -125,6 +172,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonUp("Jump"))
         {
             isJumping = false;
+            anim.SetBool("isJumping", false);
+
         }
 
 
@@ -136,6 +185,8 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("is not grounded");
         }
+
+        
 
     }
 }

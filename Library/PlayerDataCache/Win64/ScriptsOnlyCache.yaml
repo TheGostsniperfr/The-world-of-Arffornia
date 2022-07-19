@@ -8,7 +8,6 @@ ScriptsOnlyBuild:
     - PlayerSetup
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
-    - Cinemachine.CinemachineCollider
     - Cinemachine.CinemachineComposer
     - Cinemachine.CinemachineFreeLook
     - Cinemachine.CinemachineOrbitalTransposer
@@ -86,8 +85,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 1788}
     - Class: 114
       Script: {instanceID: 1824}
-    - Class: 114
-      Script: {instanceID: 2120}
     - Class: 114
       Script: {instanceID: 2526}
     - Class: 114
@@ -971,7 +968,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: 3f821d361085635370e5038dbdaf493b
+      Hash: 982fe533da60861b3c6c296a305b7038
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
