@@ -1,8 +1,9 @@
-
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using System;
-
-public class PlayerController : MonoBehaviour
+using Mirror;
+public class PlayerController : NetworkBehaviour
 {
 
     //Player speed var init
@@ -44,18 +45,16 @@ public class PlayerController : MonoBehaviour
 
 
     //Animator
+    [SerializeField] 
     private Animator anim;
-
-
-    private void Start()
-    {
-        anim = GetComponent<Animator>();
-    }
-
+    [SerializeField]
 
     private void Update()
     {
-        MovePlayer();
+        if (isLocalPlayer)
+        {
+            MovePlayer();
+        }
 
     }
 
@@ -77,6 +76,7 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("isSprinting true");
                 anim.SetBool("isSprinting", true);
+                
             }
 
         }
