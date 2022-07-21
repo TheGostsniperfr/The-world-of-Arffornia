@@ -1,5 +1,6 @@
 using UnityEngine;
 using Mirror;
+using System.Collections.Generic;
 
 public class PlayerAttack : NetworkBehaviour
 {
@@ -11,6 +12,13 @@ public class PlayerAttack : NetworkBehaviour
     [SerializeField]
     private LayerMask mask;
 
+
+    //attack with fireball
+    public List<GameObject> vfx = new List<GameObject> ();
+    private GameObject effectToSpawn;
+
+
+
     void Start()
     {
         if (cam == null)
@@ -18,6 +26,8 @@ public class PlayerAttack : NetworkBehaviour
             Debug.LogError("Pas de caméra renseignée sur le système de tir.");
             this.enabled = false;
         }
+
+        effectToSpawn = vfx[0];
     }
 
     private void Update()
@@ -25,10 +35,13 @@ public class PlayerAttack : NetworkBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Debug.Log("clique gauche détecté");
-            Attack();
+            //Attack();
+
+            FireBallAttack();
         }
     }
 
+    /*
     [Client]
     private void Attack()
     {
@@ -41,7 +54,25 @@ public class PlayerAttack : NetworkBehaviour
                 CmdPlayerAttack(hit.collider.name, weapon.domage);
             }
         }
+    }*/
+    [Client]
+    private void FireBallAttack()
+    {
+        GameObject vfx;
+        Player player = GetComponent<Player>();
+
+        if (player != null)
+        {
+            vfx = Instantiate(effectToSpawn, player.transform.position, Quaternion.identity);
+            vfx.transform.localRotation = player.transform.rotation;
+
+        }
+        else
+        {
+            Debug.Log("No player");
+        }
     }
+
 
     [Command]
     private void CmdPlayerAttack(string playerName, float damage)

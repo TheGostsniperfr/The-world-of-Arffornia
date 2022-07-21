@@ -708,6 +708,8 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 183
+  vfx:
+  - {fileID: 3382341220645437786, guid: 12319472f602f5041b756e832c7aeba7, type: 3}
 --- !u!114 &895996424391727265
 MonoBehaviour:
   m_ObjectHideFlags: 0
