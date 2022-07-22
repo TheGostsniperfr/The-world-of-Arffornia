@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System;
 using Mirror;
 public class PlayerController : NetworkBehaviour
 {
@@ -47,7 +44,6 @@ public class PlayerController : NetworkBehaviour
     //Animator
     [SerializeField] 
     private Animator anim;
-    [SerializeField]
 
     private void Update()
     {

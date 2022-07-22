@@ -11,6 +11,8 @@ public class PlayerSetup : NetworkBehaviour
 
     Camera sceneCamera;
 
+    [SerializeField] Animator anim;
+
     private void Start()
     {
         if (!isLocalPlayer)
@@ -50,6 +52,7 @@ public class PlayerSetup : NetworkBehaviour
         // On va boucler sur les différents composants renseignés et les désactiver si ce joueur n'est pas le notre
         for (int i = 0; i < componentsToDisable.Length; i++)
         {
+            anim.applyRootMotion = false;
             componentsToDisable[i].enabled = false;
         }
     }

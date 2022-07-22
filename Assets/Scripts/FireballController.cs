@@ -1,6 +1,7 @@
 using UnityEngine;
+using Mirror;
 
-public class FireballController : MonoBehaviour
+public class FireballController : NetworkBehaviour
 {
     [SerializeField] private Player playerOwner;
     //[SerializeField] private Player playerTouched = null;

@@ -1,6 +1,7 @@
 using UnityEngine;
 using Mirror;
 using System.Collections.Generic;
+using UnityEngine.Networking;
 
 public class PlayerAttack : NetworkBehaviour
 {
@@ -18,6 +19,11 @@ public class PlayerAttack : NetworkBehaviour
     private GameObject effectToSpawn;
 
 
+    //Animator
+    [SerializeField]
+    private Animator anim;
+
+
 
     void Start()
     {
@@ -32,12 +38,15 @@ public class PlayerAttack : NetworkBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (isLocalPlayer)
         {
-            Debug.Log("clique gauche détecté");
-            //Attack();
-
-            FireBallAttack();
+            if (Input.GetButtonDown("Fire1"))
+            {
+                Debug.Log("clique gauche détecté");
+                //Attack();
+                anim.SetTrigger("throwProjectil");
+                FireBallAttack();
+            }
         }
     }
 
@@ -55,7 +64,7 @@ public class PlayerAttack : NetworkBehaviour
             }
         }
     }*/
-    [Client]
+    [Command]
     private void FireBallAttack()
     {
         GameObject vfx;
@@ -65,7 +74,7 @@ public class PlayerAttack : NetworkBehaviour
         {
             vfx = Instantiate(effectToSpawn, player.transform.position, Quaternion.identity);
             vfx.transform.localRotation = player.transform.rotation;
-
+            NetworkServer.Spawn(vfx);
         }
         else
         {
