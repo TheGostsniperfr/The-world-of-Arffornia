@@ -76,7 +76,6 @@ public class PlayerAttack : NetworkBehaviour
             vfx.transform.localRotation = player.transform.rotation;
 
 
-
             NetworkServer.Spawn(vfx);
         }
         else
