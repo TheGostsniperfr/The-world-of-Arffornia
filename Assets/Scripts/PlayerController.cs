@@ -140,6 +140,7 @@ public class PlayerController : NetworkBehaviour
                 Velocity.y = jumpForce;
                 isJumping = true;
                 jumpTimeCounter = jumpTime;
+                anim.SetTrigger("jump");
                 anim.SetBool("isJumping", true);
 
             }

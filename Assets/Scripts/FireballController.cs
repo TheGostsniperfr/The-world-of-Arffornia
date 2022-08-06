@@ -3,8 +3,6 @@ using Mirror;
 
 public class FireballController : NetworkBehaviour
 {
-    [SerializeField] private Player playerOwner;
-    //[SerializeField] private Player playerTouched = null;
 
     [SerializeField] private float speed = 1;
     [SerializeField] private float maxFireballRange = 10;
@@ -16,6 +14,8 @@ public class FireballController : NetworkBehaviour
     {
         originePosition = transform.position;
     }
+
+
 
     private void Update()
     {
@@ -36,17 +36,15 @@ public class FireballController : NetworkBehaviour
     {
         if(collider.gameObject.tag == "Player")
         {
-            //check projectile hit the player himself
-            if (collider.gameObject != playerOwner)
-            {
-                Debug.Log(collider.name + " a été touché");
-                isTouched = true;
-                //playerTouched = collider.gameObject.GetComponent<Player>();
-            }
-            else
-            {
-                Debug.Log("le projectile a touché le joueur qui la lancé /!\\ ");
-            }
+        //check projectile hit the player himself
+            
+            
+            Debug.Log(collider.name + " a été touché");
+            isTouched = true;
+            //playerTouched = collider.gameObject.GetComponent<Player>();
+
+            CmdPlayerAttack(collider.name, 30f);
+
         }
         else
         {
@@ -54,6 +52,16 @@ public class FireballController : NetworkBehaviour
             isTouched = true;
             Debug.Log("Other collider hit");
         }
+    }
+
+
+    [Command(requiresAuthority = false)]
+    private void CmdPlayerAttack(string playerName, float damage)
+    {
+        Debug.Log(playerName + "à été touché");
+
+        Player player = GameManager.GetPlayer(playerName);
+        player.RpcTakeDamage(damage);
     }
    
 }

@@ -74,6 +74,9 @@ public class PlayerAttack : NetworkBehaviour
         {
             vfx = Instantiate(effectToSpawn, player.transform.position, Quaternion.identity);
             vfx.transform.localRotation = player.transform.rotation;
+
+
+
             NetworkServer.Spawn(vfx);
         }
         else
@@ -83,14 +86,7 @@ public class PlayerAttack : NetworkBehaviour
     }
 
 
-    [Command]
-    private void CmdPlayerAttack(string playerName, float damage)
-    {
-        Debug.Log(playerName + "à été touché");
 
-        Player player = GameManager.GetPlayer(playerName);
-        player.RpcTakeDamage(damage);
-    }
 
 
 

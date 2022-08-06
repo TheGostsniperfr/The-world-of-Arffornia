@@ -18,6 +18,8 @@ ScriptsOnlyBuild:
     Mirror.Components.dll:
     - Mirror.NetworkAnimator
     - Mirror.NetworkTransform
+    Mirror.Editor.dll:
+    - Mirror.NetworkBehaviourInspector
     Mirror.dll:
     - Mirror.NetworkIdentity
     - Mirror.NetworkManager
@@ -300,7 +302,7 @@ ScriptsOnlyBuild:
     className: LatencySimulation
   - hash:
       serializedVersion: 2
-      Hash: 7eaae5c2f578b476309b928d2aba6027
+      Hash: db2bed3d907a9ee67bdcbd116b0442c6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FireballController
