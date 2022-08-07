@@ -18,6 +18,11 @@ public class PlayerAttack : NetworkBehaviour
     public List<GameObject> vfx = new List<GameObject> ();
     private GameObject effectToSpawn;
 
+    [SerializeField] private float timeBeforeThrowEffect = 0.3f;
+    private float timeThrowEffect;
+    [SerializeField] private float cooldownNextAttack = 0.5f;
+    private bool fireBallThrow;
+
 
     //Animator
     [SerializeField]
@@ -40,12 +45,21 @@ public class PlayerAttack : NetworkBehaviour
     {
         if (isLocalPlayer)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire1") && ((timeThrowEffect+cooldownNextAttack) <= Time.time))
             {
                 Debug.Log("clique gauche détecté");
                 //Attack();
                 anim.SetTrigger("throwProjectil");
+
+                timeThrowEffect = Time.time;
+                fireBallThrow = true;
+            }
+
+            if(fireBallThrow && ((timeThrowEffect+timeBeforeThrowEffect) <= Time.time))
+            {
+                fireBallThrow = false;
                 FireBallAttack();
+
             }
         }
     }
@@ -75,7 +89,6 @@ public class PlayerAttack : NetworkBehaviour
             vfx = Instantiate(effectToSpawn, player.transform.position, Quaternion.identity);
             vfx.transform.localRotation = player.transform.rotation;
 
-
             NetworkServer.Spawn(vfx);
         }
         else
@@ -83,10 +96,4 @@ public class PlayerAttack : NetworkBehaviour
             Debug.Log("No player");
         }
     }
-
-
-
-
-
-
 }

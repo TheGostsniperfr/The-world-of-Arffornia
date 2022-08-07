@@ -6,6 +6,8 @@ public class FireballController : NetworkBehaviour
 
     [SerializeField] private float speed = 1;
     [SerializeField] private float maxFireballRange = 10;
+    
+
 
     private bool isTouched = false;
     private Vector3 originePosition;
