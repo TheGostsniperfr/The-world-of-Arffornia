@@ -27,6 +27,7 @@ public class PlayerAttack : NetworkBehaviour
     //Animator
     [SerializeField]
     private Animator anim;
+    [SerializeField] private NetworkAnimator netAnim;
 
     private FireballController fireballController;
 
@@ -50,7 +51,8 @@ public class PlayerAttack : NetworkBehaviour
             if (Input.GetButtonDown("Fire1") && ((timeThrowEffect+cooldownNextAttack) <= Time.time))
             {
                 //Attack();
-                anim.SetTrigger("throwProjectil");
+                netAnim.SetTrigger("throwProjectil");
+
 
                 timeThrowEffect = Time.time;
                 fireBallThrow = true;

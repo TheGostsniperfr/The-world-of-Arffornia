@@ -44,6 +44,7 @@ public class PlayerController : NetworkBehaviour
     //Animator
     [SerializeField] 
     private Animator anim;
+    [SerializeField] NetworkAnimator netAnim;
 
     private void Update()
     {
@@ -140,7 +141,7 @@ public class PlayerController : NetworkBehaviour
                 Velocity.y = jumpForce;
                 isJumping = true;
                 jumpTimeCounter = jumpTime;
-                anim.SetTrigger("jump");
+                netAnim.SetTrigger("jump");
                 anim.SetBool("isJumping", true);
 
             }
