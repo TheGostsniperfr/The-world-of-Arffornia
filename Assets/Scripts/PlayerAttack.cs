@@ -28,6 +28,8 @@ public class PlayerAttack : NetworkBehaviour
     [SerializeField]
     private Animator anim;
 
+    private FireballController fireballController;
+
 
 
     void Start()
@@ -47,7 +49,6 @@ public class PlayerAttack : NetworkBehaviour
         {
             if (Input.GetButtonDown("Fire1") && ((timeThrowEffect+cooldownNextAttack) <= Time.time))
             {
-                Debug.Log("clique gauche détecté");
                 //Attack();
                 anim.SetTrigger("throwProjectil");
 
@@ -82,18 +83,26 @@ public class PlayerAttack : NetworkBehaviour
     private void FireBallAttack()
     {
         GameObject vfx;
+
         Player player = GetComponent<Player>();
 
         if (player != null)
         {
             vfx = Instantiate(effectToSpawn, player.transform.position, Quaternion.identity);
+            
             vfx.transform.localRotation = player.transform.rotation;
+            
+
+            fireballController = vfx.GetComponent<FireballController>();
+            fireballController.playerOrigine = transform.name;
+
+
+            Debug.Log("islocalPlayer /!\\ : " + transform.name);
+
+
 
             NetworkServer.Spawn(vfx);
         }
-        else
-        {
-            Debug.Log("No player");
-        }
+  
     }
 }

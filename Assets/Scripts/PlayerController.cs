@@ -70,7 +70,7 @@ public class PlayerController : NetworkBehaviour
 
             if (!anim.GetBool("isSprinting"))
             {
-                Debug.Log("isSprinting true");
+                //Debug.Log("isSprinting true");
                 anim.SetBool("isSprinting", true);
                 
             }
@@ -86,7 +86,7 @@ public class PlayerController : NetworkBehaviour
 
                 if (anim.GetBool("isSprinting"))
                 {
-                    Debug.Log("isSprinting false");
+                    //Debug.Log("isSprinting false");
                     anim.SetBool("isSprinting", false);
                 }
             }
@@ -113,7 +113,7 @@ public class PlayerController : NetworkBehaviour
 
             if (!anim.GetBool("isWalking"))
             {
-                Debug.Log("isWalking true");
+                //Debug.Log("isWalking true");
                 anim.SetBool("isWalking", true);
             }
         }
@@ -122,7 +122,7 @@ public class PlayerController : NetworkBehaviour
 
             if (anim.GetBool("isWalking"))
             {
-                Debug.Log("isWalking false");
+                //Debug.Log("isWalking false");
                 anim.SetBool("isWalking", false);
             }
         }
@@ -136,7 +136,7 @@ public class PlayerController : NetworkBehaviour
 
             if (!isJumping && Input.GetKey(KeyCode.Space))
             {
-                Debug.Log("key espace pressed");
+                //Debug.Log("key espace pressed");
                 Velocity.y = jumpForce;
                 isJumping = true;
                 jumpTimeCounter = jumpTime;
@@ -180,7 +180,7 @@ public class PlayerController : NetworkBehaviour
 
         if(!characterController.isGrounded && Velocity.y == -1f)
         {
-            Debug.Log("is not grounded");
+            //Debug.Log("is not grounded");
         }
 
         

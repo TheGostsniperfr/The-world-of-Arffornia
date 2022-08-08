@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Explosion01Controller
     - FireballController
     - GameManager
     - Player
@@ -32,7 +33,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateEditor
     - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
@@ -127,19 +127,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4070}
     - Class: 114
-      Script: {instanceID: 4904}
+      Script: {instanceID: 4502}
     - Class: 114
-      Script: {instanceID: 4998}
+      Script: {instanceID: 4906}
     - Class: 114
-      Script: {instanceID: 5082}
+      Script: {instanceID: 5000}
     - Class: 114
-      Script: {instanceID: 5232}
+      Script: {instanceID: 5084}
     - Class: 114
-      Script: {instanceID: 5304}
+      Script: {instanceID: 5234}
     - Class: 114
-      Script: {instanceID: 5556}
+      Script: {instanceID: 5306}
     - Class: 114
-      Script: {instanceID: 5572}
+      Script: {instanceID: 5558}
+    - Class: 114
+      Script: {instanceID: 5574}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
@@ -301,7 +303,7 @@ ScriptsOnlyBuild:
     className: LatencySimulation
   - hash:
       serializedVersion: 2
-      Hash: db2bed3d907a9ee67bdcbd116b0442c6
+      Hash: a6aae3414ec22e6f9bf1c414f0e9cb81
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FireballController
@@ -883,6 +885,12 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
+      Hash: ecfdc90c8bdca51d9fc850c74a9b5c21
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Explosion01Controller
+  - hash:
+      serializedVersion: 2
       Hash: 306f6c6830d6725abf0598650905dcd4
     assemblyName: Mirror.Components.dll
     namespaceName: Mirror
@@ -1105,7 +1113,7 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: c5b2ee5567651b4f2948dbb7f0d71b62
+      Hash: 8889c3f893503ddda5c87625f6eb70f0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerAttack
@@ -1145,12 +1153,6 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Components.dll
     namespaceName: Mirror
     className: SpatialHashingInterestManagement
-  - hash:
-      serializedVersion: 2
-      Hash: 2aa77eed47b1e060b9c4298d14e92e8d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Fireball2Controller
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

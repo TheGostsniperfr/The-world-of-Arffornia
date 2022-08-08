@@ -340,7 +340,7 @@
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.Timeline.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/where-allocations.ref.dll"
-"Assets/Fireball2Controller.cs"
+"Assets/Explosion01Controller.cs"
 "Assets/Scripts/FireballController.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/GameSettings.cs"

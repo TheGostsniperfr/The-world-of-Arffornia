@@ -11,6 +11,8 @@ public class FireballController : NetworkBehaviour
 
     private bool isTouched = false;
     private Vector3 originePosition;
+    public string playerOrigine;
+
 
 
     [SerializeField] private GameObject FireballExplosion;
@@ -18,9 +20,11 @@ public class FireballController : NetworkBehaviour
 
 
 
+
     private void Start()
     {
         originePosition = transform.position;
+        Debug.Log("Fireball playerThrow : " + playerOrigine);
     }
 
 
@@ -37,47 +41,43 @@ public class FireballController : NetworkBehaviour
             }
             else
             {
-                Debug.Log("Destroy GameObject name's out of range : " + transform.name);
-                Destroy(gameObject);
+
+                Debug.Log("explose1");
+
+                Explode();
+                FireballDestroy();
+
             }
         }
 
     }
-    
+
     private void OnTriggerEnter(Collider collider)
     {
 
-        if (Vector3.Distance(originePosition, transform.position) >= 1)
+        //empeche bug lors de l'init
+        if (playerOrigine != "")
         {
-            Explode();
-        }
-        /*
-        if (collider.gameObject.tag == "Player")
-        {
-        //check projectile hit the player himself
-            
-            
-            Debug.Log(collider.name + " a été touché");
-            isTouched = true;
-            //playerTouched = collider.gameObject.GetComponent<Player>();
 
-            CmdPlayerAttack(collider.name, 30f);
+            if (collider.transform.name != playerOrigine)
+            {
+                Debug.Log("colliderName : " + collider.name);
 
+                Explode();
+                FireballDestroy();
+
+            }
         }
         else
         {
-            //The projectile hit other collider ( wall, ... )
-            isTouched = true;
-            Debug.Log("Other collider hit");
+            Debug.Log("playerOrigine est null");
         }
-        */
     }
 
 
     [Command(requiresAuthority = false)]
     private void CmdPlayerAttack(string playerName, float damage)
     {
-        Debug.Log(playerName + "à été touché");
 
         Player player = GameManager.GetPlayer(playerName);
         player.RpcTakeDamage(damage);
@@ -85,12 +85,26 @@ public class FireballController : NetworkBehaviour
     }
 
 
+
+
+    [Command(requiresAuthority = false)]
+    private void FireballDestroy()
+    {
+        Destroy(gameObject);
+    }
+
+
+
+    [Command(requiresAuthority = false)]
     private void Explode()
     {
 
+        Debug.Log("explose2");
+
 
         // explosion effect
-        //Instantiate(FireballExplosion, transform.position, transform.rotation);
+        GameObject exploVFX = Instantiate(FireballExplosion, transform.position, transform.rotation);
+        NetworkServer.Spawn(exploVFX);
 
         //Get nearby object
         Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
@@ -103,15 +117,6 @@ public class FireballController : NetworkBehaviour
                 //take damage
                 CmdPlayerAttack(player.name, 30f);
             }
-
         }
-
-
-        //kill object
-        Debug.Log("Destroy GameObject name's : " + transform.name);
-        Destroy(gameObject);
-
-
-    }
-   
+    }   
 }

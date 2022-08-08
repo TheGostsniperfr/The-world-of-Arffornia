@@ -710,9 +710,10 @@ MonoBehaviour:
     m_Bits: 183
   vfx:
   - {fileID: 7584943179759472836, guid: 5747a324918df724cbf8cc9df09e9d05, type: 3}
-  timeBeforeThrowEffect: 0.25
+  timeBeforeThrowEffect: 0.3
   cooldownNextAttack: 0.25
   anim: {fileID: 4834402899435916564}
+  fireballController: {fileID: 0}
 --- !u!114 &895996424391727265
 MonoBehaviour:
   m_ObjectHideFlags: 0
