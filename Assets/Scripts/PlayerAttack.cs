@@ -43,7 +43,7 @@ public class PlayerAttack : NetworkBehaviour
     [SerializeField] private int aimBot_maxEntitiesBeforeLivingTarget = 3;
     [SerializeField] private List<string> aimBot_filterTag;
 
-    Collider[] targetsList;
+    [SerializeField] private List<Collider> targetsList;
 
 
 
@@ -120,26 +120,12 @@ public class PlayerAttack : NetworkBehaviour
     {
         //search potential target
 
-        if (targetsList.Length != 0)
+        if (targetsList.Count != 0)
         {
             isTarget = true;
             //take the closest target
             aimBot_ActualTarget = targetsList[0];
-            int potentialTargetCounter = 0;
 
-            foreach (Collider targets in targetsList)
-            {
-                if (aimBot_filterTag.Contains(targets.gameObject.tag))
-                {
-                    potentialTargetCounter++;
-
-                    if (targets.gameObject != this.gameObject)
-                    {
-                        aimBot_ActualTarget = targets;
-                        break;
-                    }
-                }
-            }
         }
         else
         {
@@ -156,7 +142,8 @@ public class PlayerAttack : NetworkBehaviour
 
         if (targetIsAlive(aimBot_ActualTarget.gameObject))
         {
-            int targetIndex = Array.IndexOf(targetsList, aimBot_ActualTarget);
+            //int targetIndex = Array.IndexOf(targetsList, aimBot_ActualTarget);
+            int targetIndex = targetsList.IndexOf(aimBot_ActualTarget);
 
             if (targetIndex <= aimBot_maxEntitiesBeforeLivingTarget && targetIndex != -1)
             {
@@ -179,16 +166,27 @@ public class PlayerAttack : NetworkBehaviour
         return true;
     }
 
-    private Collider[] targetList()
+    private List<Collider> targetList()
     {
-        //list all potentional target in area range
+        //return list of all target filter by tag and not the localplayer
 
-        Collider[] targetsList = Physics.OverlapSphere(transform.position, aimBot_Range);
-        targetsList.OrderBy(x => Vector3.Distance(this.transform.position, x.transform.position)).ToArray();
+        Collider[] _targetsList = Physics.OverlapSphere(transform.position, aimBot_Range);
+        _targetsList = _targetsList.OrderBy(x => Vector3.Distance(this.transform.position, x.transform.position)).ToArray();
 
-        //delete first element ( it's the localplayer )
-        targetsList = targetsList.Where(x => x != targetsList[0]).ToArray();
+        List<Collider> newTargetsList = new();
 
+        foreach (Collider target in _targetsList)
+        {
+            if (aimBot_filterTag.Contains(target.gameObject.tag))
+            {
+                if (target.gameObject != this.gameObject)
+                {
+                    newTargetsList.Add(target);
+                }
+            }
+        }
+
+        targetsList = newTargetsList;
 
         return targetsList;
     }

@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 688611973}
   - component: {fileID: 688611972}
   m_Layer: 3
-  m_Name: Cube (2)
+  m_Name: Small_Cube
   m_TagString: test
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -481,7 +481,7 @@ GameObject:
   - component: {fileID: 713299210}
   - component: {fileID: 713299209}
   m_Layer: 3
-  m_Name: Cube (1)
+  m_Name: Big_Cube
   m_TagString: test
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
