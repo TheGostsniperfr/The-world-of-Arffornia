@@ -4903,7 +4903,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  speed: 20
+  speed: 5
   maxFireballRange: 30
   playerOrigine: 
   FireballExplosion: {fileID: 1985032197099052157, guid: 9bbaa14b16a533b4ea92678ad1af4269,

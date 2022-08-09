@@ -41,9 +41,6 @@ public class FireballController : NetworkBehaviour
             }
             else
             {
-
-                Debug.Log("explose1");
-
                 Explode();
                 FireballDestroy();
 
@@ -98,9 +95,6 @@ public class FireballController : NetworkBehaviour
     [Command(requiresAuthority = false)]
     private void Explode()
     {
-
-        Debug.Log("explose2");
-
 
         // explosion effect
         GameObject exploVFX = Instantiate(FireballExplosion, transform.position, transform.rotation);
