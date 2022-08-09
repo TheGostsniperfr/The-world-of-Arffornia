@@ -1,7 +1,7 @@
 using UnityEngine;
 using Mirror;
 using System.Collections.Generic;
-using UnityEngine.Networking;
+using System.Linq;
 
 public class PlayerAttack : NetworkBehaviour
 {
@@ -32,6 +32,16 @@ public class PlayerAttack : NetworkBehaviour
     private FireballController fireballController;
 
 
+    //Player aimbot 
+    [SerializeField] private PlayerController playerController;
+    [SerializeField] private float aimBot_Range;
+    [SerializeField] private float aimBot_TurnDegree;
+
+    [SerializeField] private GameObject aimBot_ActualTarget;
+    [SerializeField] private float aimBot_maxRangeTarget;
+
+
+
 
     void Start()
     {
@@ -50,7 +60,9 @@ public class PlayerAttack : NetworkBehaviour
         {
             if (Input.GetButtonDown("Fire1") && ((timeThrowEffect+cooldownNextAttack) <= Time.time))
             {
-                //Attack();
+                //Check target
+
+                //Attack
                 netAnim.SetTrigger("throwProjectil");
 
 
@@ -67,20 +79,46 @@ public class PlayerAttack : NetworkBehaviour
         }
     }
 
-    /*
-    [Client]
-    private void Attack()
-    {
-        RaycastHit hit;
 
-        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, weapon.range, mask))
+    private void aimBot()
+    {
+        //check no target currently
+        if(aimBot_ActualTarget == null)
         {
-            if (hit.collider.tag == "Player")
+            //search potential target
+            Collider[] TargetList = Physics.OverlapSphere(transform.position, aimBot_Range);
+            TargetList.OrderBy(x => Vector3.Distance(this.transform.position, x.transform.position)).ToArray();
+
+            //delete first element ( it's the localplayer )
+            TargetList = TargetList.Where(x => x != TargetList[0]).ToArray();
+            
+
+            if (TargetList.Length != 0)
             {
-                CmdPlayerAttack(hit.collider.name, weapon.domage);
+                //take the closest target
+                //save target
+                aimBot_ActualTarget = TargetList[0].gameObject;
+
+                //rotate player to target direction
+
+
             }
+            else
+            {
+                //pas de cible dans la zone
+            }
+
         }
-    }*/
+        else
+        {
+            //check Target is alive
+
+            //rotate player to target direction
+
+        }
+    }
+
+
     [Command]
     private void FireBallAttack()
     {

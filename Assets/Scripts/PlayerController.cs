@@ -46,6 +46,12 @@ public class PlayerController : NetworkBehaviour
     private Animator anim;
     [SerializeField] NetworkAnimator netAnim;
 
+    //aimBot 
+
+    //if isTarget = True, the camera haven't de priority of player rotate
+    [SerializeField] public bool isTarget;
+
+
     private void Update()
     {
         if (isLocalPlayer)
@@ -105,8 +111,12 @@ public class PlayerController : NetworkBehaviour
         if (direction.magnitude >= 0.1f)
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+            if (!isTarget)
+            {
+                rotatePlayerToTarget(targetAngle);
+            }
+
 
 
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
@@ -186,5 +196,14 @@ public class PlayerController : NetworkBehaviour
 
         
 
+    }
+
+
+    public void rotatePlayerToTarget(float _targetAngle)
+    {
+        
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+        
     }
 }
