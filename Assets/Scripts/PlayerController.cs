@@ -49,7 +49,8 @@ public class PlayerController : NetworkBehaviour
     //aimBot 
 
     //if isTarget = True, the camera haven't de priority of player rotate
-    [SerializeField] public bool isTarget;
+    [SerializeField] public bool aimBot_IsTarget;
+    [SerializeField] public GameObject aimBot_Target;
 
 
     private void Update()
@@ -57,6 +58,7 @@ public class PlayerController : NetworkBehaviour
         if (isLocalPlayer)
         {
             MovePlayer();
+            aimBot_ApplyTarget();
         }
 
     }
@@ -193,16 +195,22 @@ public class PlayerController : NetworkBehaviour
 
     }
 
-    public void aimBot_Target(GameObject target)
+    public void aimBot_ApplyTarget()
     {
         //calcul neccessary rotation of player and camera to be in front of target
 
         //calcul rotation with player front
-        
+
 
         //calcul roration with camera's player front 
-
-        Debug.Log("Player Rotation with : " + target.name);
+        if (aimBot_IsTarget)
+        {
+            Debug.Log("Player Rotation with : " + aimBot_Target.name);
+        }
+        else
+        {
+            Debug.Log("no target");
+        }
 
     }
    

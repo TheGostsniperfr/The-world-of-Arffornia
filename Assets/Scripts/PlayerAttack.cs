@@ -34,15 +34,11 @@ public class PlayerAttack : NetworkBehaviour
 
 
     //Player aimbot 
-    [SerializeField] private bool isTarget;
     [SerializeField] private PlayerController playerController;
     [SerializeField] private float aimBot_Range = 10;
-    [SerializeField] private float aimBot_TurnDegree = 180;
-
     [SerializeField] private Collider aimBot_ActualTarget;
     [SerializeField] private int aimBot_maxEntitiesBeforeLivingTarget = 3;
     [SerializeField] private List<string> aimBot_filterTag;
-
     [SerializeField] private List<Collider> targetsList;
 
 
@@ -90,80 +86,86 @@ public class PlayerAttack : NetworkBehaviour
 
 
     private void aimBot()
-    {
-        //Check target and choose him
+    { 
+        Collider newTarget = aimBot_ActualTarget;
 
-        if (aimBot_ActualTarget != null)
+        if(aimBot_ActualTarget == null)
         {
-            if (!targetTooFar())
+            //no target
+            selectTarget();
+        }
+        else
+        {
+            //have target 
+            //check if target is too far
+
+            if (targetTooFar())
             {
-                //send target position to playerController for it to apply the rotation on player
-                Debug.Log("send target to player controller");
-                playerController.aimBot_Target(aimBot_ActualTarget.gameObject);
-            }
-            else
-            {
-                Debug.Log("target too far");
+
+                selectTarget();
             }
             
         }
-        else
+
+
+        //check if target has updated
+        if (aimBot_ActualTarget != newTarget)
         {
-            //choose a target
-            Debug.Log("chosse target");
-            selectTarget();
+            //update target
+            Debug.Log("update and send target");
+            sendTarget();
         }
 
+        
+
+
+        
     }
 
-    private void selectTarget()
+    private void sendTarget()
+    {
+        if (aimBot_ActualTarget != null)
+        {
+            playerController.aimBot_IsTarget = true;
+            playerController.aimBot_Target = aimBot_ActualTarget.gameObject;
+        }
+        else
+        {
+            playerController.aimBot_IsTarget = false;
+        }
+    }
+
+    private bool selectTarget()
     {
         //search potential target
+        //return true if has found a target
 
         if (targetsList.Count != 0)
         {
-            isTarget = true;
             //take the closest target
             aimBot_ActualTarget = targetsList[0];
-
+            return true;
         }
-        else
-        {
-            //no target in area
-            isTarget = false;
-            Debug.Log("no target in area");
-        }
+        
+        //no target in area
+        aimBot_ActualTarget = null;
+        return false;
+            
     }
 
     private bool targetTooFar()
     {
-
-        //search if target is too far
-
-        if (targetIsAlive(aimBot_ActualTarget.gameObject))
-        {
-            //int targetIndex = Array.IndexOf(targetsList, aimBot_ActualTarget);
+        
             int targetIndex = targetsList.IndexOf(aimBot_ActualTarget);
 
-            if (targetIndex <= aimBot_maxEntitiesBeforeLivingTarget && targetIndex != -1)
+            //search if target is too far
+            if (!GameObject.Find(aimBot_ActualTarget.gameObject.name) || !(targetIndex <= aimBot_maxEntitiesBeforeLivingTarget-1 && targetIndex != -1))
             {
-                return false;
+            // search new target
+                return true;
             }
-            else
-            {
-                Debug.Log("max entities before living target nb: " + targetIndex);
-            }
-        }
-        else
-        {
-            Debug.Log("target not alive");
 
-        }
-
-
-        //target is too far or is not alive
-        aimBot_ActualTarget = null;
-        return true;
+        return false;
     }
 
     private List<Collider> targetList()
@@ -191,12 +193,6 @@ public class PlayerAttack : NetworkBehaviour
         return targetsList;
     }
 
-    private bool targetIsAlive(GameObject _target)
-    {
-        return GameObject.Find(_target.gameObject.name);
-    }
-
-
     [Command]
     private void FireBallAttack()
     {
@@ -207,9 +203,9 @@ public class PlayerAttack : NetworkBehaviour
         if (player != null)
         {
             vfx = Instantiate(effectToSpawn, player.transform.position, Quaternion.identity);
-            
+
             vfx.transform.localRotation = player.transform.rotation;
-            
+
 
             fireballController = vfx.GetComponent<FireballController>();
             fireballController.playerOrigine = transform.name;
@@ -221,6 +217,5 @@ public class PlayerAttack : NetworkBehaviour
 
             NetworkServer.Spawn(vfx);
         }
-  
     }
 }
