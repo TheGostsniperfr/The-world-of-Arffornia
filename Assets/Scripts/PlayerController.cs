@@ -1,5 +1,8 @@
 using UnityEngine;
 using Mirror;
+using System.Collections.Generic;
+using System.Collections;
+
 public class PlayerController : NetworkBehaviour
 {
 
@@ -205,13 +208,37 @@ public class PlayerController : NetworkBehaviour
         //calcul roration with camera's player front 
         if (aimBot_IsTarget)
         {
-            Debug.Log("Player Rotation with : " + aimBot_Target.name);
+            Debug.Log("Player target with : " + aimBot_Target.name);
+
+            StartCoroutine(aimBot_lookAt());
+
         }
         else
         {
-            Debug.Log("no target");
+            StopCoroutine(aimBot_lookAt());
         }
+        
 
+    }
+
+
+
+    private IEnumerator aimBot_lookAt()
+    {
+        Quaternion lookRotation = Quaternion.LookRotation(aimBot_Target.gameObject.transform.position - transform.position);
+        float time = 0;
+
+        while(time < 1)
+        {
+
+            Quaternion playerRotation = Quaternion.Slerp(transform.rotation, lookRotation, time);
+            transform.rotation = Quaternion.Euler(new Vector3(0f, playerRotation.eulerAngles.y, 0f));
+
+
+            time += Time.deltaTime * speed;
+
+            yield return null;
+        }
     }
    
 }
