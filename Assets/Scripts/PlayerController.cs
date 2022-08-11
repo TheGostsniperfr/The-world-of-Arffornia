@@ -1,7 +1,7 @@
 using UnityEngine;
 using Mirror;
-using System.Collections.Generic;
 using System.Collections;
+using Cinemachine;
 
 public class PlayerController : NetworkBehaviour
 {
@@ -49,19 +49,31 @@ public class PlayerController : NetworkBehaviour
     private Animator anim;
     [SerializeField] NetworkAnimator netAnim;
 
-    //aimBot 
 
-    //if isTarget = True, the camera haven't de priority of player rotate
+    //aimBot 
+    [SerializeField] private CinemachineFreeLook cinemachineCamera;
     [SerializeField] public bool aimBot_IsTarget;
     [SerializeField] public GameObject aimBot_Target;
+    [SerializeField] private float aimBot_TimeNoMove = 0.25f;
+    [SerializeField] private float aimBot_TurnSmoothTime = 0.5f;
+    private float aimBot_TurnSmoothVelocity;
 
 
     private void Update()
     {
         if (isLocalPlayer)
         {
-            MovePlayer();
-            aimBot_ApplyTarget();
+            if (!aimBot_IsTarget)
+            {
+                MovePlayer();
+            }
+            else
+            {
+                //stop all move animation
+                isSprinting = false;
+                anim.SetBool("isWalking", false);
+                anim.SetBool("isSprinting", false);
+            }
         }
 
     }
@@ -71,41 +83,42 @@ public class PlayerController : NetworkBehaviour
     {
         float xMov = Input.GetAxisRaw("Horizontal");
         float zMov = Input.GetAxisRaw("Vertical");
-
-        if (Input.GetKeyDown(KeyCode.LeftShift) && !isSprinting)
-        {
-            isSprinting = true;
-            speed *= speedSprintMultiplicator;
-            turnSmoothTime *= speedTurnSmoothMultiplicator;
-
-            
-
-            if (!anim.GetBool("isSprinting"))
+        
+            if (Input.GetKeyDown(KeyCode.LeftShift) && !isSprinting)
             {
-                //Debug.Log("isSprinting true");
-                anim.SetBool("isSprinting", true);
-                
-            }
+                isSprinting = true;
+                speed *= speedSprintMultiplicator;
+                turnSmoothTime *= speedTurnSmoothMultiplicator;
 
-        }
-        else
-        {
-            if (Input.GetKeyUp(KeyCode.LeftShift))
-            {
-                isSprinting = false;
-                speed /= speedSprintMultiplicator;
-                turnSmoothTime /= speedTurnSmoothMultiplicator;
 
-                if (anim.GetBool("isSprinting"))
+
+                if (!anim.GetBool("isSprinting"))
                 {
-                    //Debug.Log("isSprinting false");
-                    anim.SetBool("isSprinting", false);
-                }
-            }
-                
-            
+                    //Debug.Log("isSprinting true");
+                    anim.SetBool("isSprinting", true);
 
-        }
+                }
+
+            }
+            else
+            {
+                if (Input.GetKeyUp(KeyCode.LeftShift))
+                {
+                    isSprinting = false;
+                    speed /= speedSprintMultiplicator;
+                    turnSmoothTime /= speedTurnSmoothMultiplicator;
+
+                    if (anim.GetBool("isSprinting"))
+                    {
+                        //Debug.Log("isSprinting false");
+                        anim.SetBool("isSprinting", false);
+                    }
+                }
+
+
+
+            }
+        
 
         
 
@@ -200,45 +213,47 @@ public class PlayerController : NetworkBehaviour
 
     public void aimBot_ApplyTarget()
     {
-        //calcul neccessary rotation of player and camera to be in front of target
+        //on attack button clicked
+        //rotate player and camera
+        StartCoroutine(aimBot_lookAt());
 
-        //calcul rotation with player front
-
-
-        //calcul roration with camera's player front 
-        if (aimBot_IsTarget)
-        {
-            Debug.Log("Player target with : " + aimBot_Target.name);
-
-            StartCoroutine(aimBot_lookAt());
-
-        }
-        else
-        {
-            StopCoroutine(aimBot_lookAt());
-        }
-        
+        //stop player
+        aimBot_IsTarget = true;
 
     }
 
+    
 
-
-    private IEnumerator aimBot_lookAt()
+    public IEnumerator aimBot_lookAt()
     {
         Quaternion lookRotation = Quaternion.LookRotation(aimBot_Target.gameObject.transform.position - transform.position);
         float time = 0;
+        
+        
 
         while(time < 1)
         {
+            //calcul rotate
+            Quaternion rotationToTarget = Quaternion.Slerp(transform.rotation, lookRotation, time);
+                       
+            //Apply rotate player body to target
+            transform.rotation = Quaternion.Euler(new Vector3(0f, rotationToTarget.eulerAngles.y, 0f));
 
-            Quaternion playerRotation = Quaternion.Slerp(transform.rotation, lookRotation, time);
-            transform.rotation = Quaternion.Euler(new Vector3(0f, playerRotation.eulerAngles.y, 0f));
 
+            //Apply rotate player camera to target
+            float _angle = Mathf.SmoothDampAngle(cinemachineCamera.m_XAxis.Value, rotationToTarget.eulerAngles.y, ref aimBot_TurnSmoothVelocity, aimBot_TurnSmoothTime);
+            cinemachineCamera.m_XAxis.Value = _angle;
 
             time += Time.deltaTime * speed;
 
             yield return null;
         }
+        yield return new WaitForSeconds(aimBot_TimeNoMove);
+
+        aimBot_IsTarget = false;
+
+        StopCoroutine(aimBot_lookAt());
+
     }
-   
+
 }

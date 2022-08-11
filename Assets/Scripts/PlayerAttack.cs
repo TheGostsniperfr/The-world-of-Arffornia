@@ -66,8 +66,10 @@ public class PlayerAttack : NetworkBehaviour
 
             if (Input.GetButtonDown("Fire1") && ((timeThrowEffect+cooldownNextAttack) <= Time.time))
             {
-                
+
                 //Attack
+                playerController.aimBot_ApplyTarget();
+                
                 netAnim.SetTrigger("throwProjectil");
 
 
@@ -126,12 +128,7 @@ public class PlayerAttack : NetworkBehaviour
     {
         if (aimBot_ActualTarget != null)
         {
-            playerController.aimBot_IsTarget = true;
             playerController.aimBot_Target = aimBot_ActualTarget.gameObject;
-        }
-        else
-        {
-            playerController.aimBot_IsTarget = false;
         }
     }
 
