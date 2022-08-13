@@ -151,7 +151,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760572956443240476}
-  m_LocalRotation: {x: 0.0781669, y: 0.000000004288434, z: -3.3624242e-10, w: 0.9969403}
+  m_LocalRotation: {x: 0.075721316, y: 0.24742332, z: -0.01939967, w: 0.9657493}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -229,7 +229,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2169474005595403598}
-  m_LocalRotation: {x: 0.10687771, y: -0, z: -0, w: 0.9942722}
+  m_LocalRotation: {x: 0.10353386, y: 0.24676114, z: -0.026525196, w: 0.9631647}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -436,8 +436,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4138484005632116914}
-  m_LocalRotation: {x: 0.0781669, y: 0.000000005638772, z: -2.3032892e-10, w: 0.9969403}
-  m_LocalPosition: {x: 0, y: 0.87, z: -4}
+  m_LocalRotation: {x: 0.07572131, y: 0.24742332, z: -0.019399669, w: 0.96574926}
+  m_LocalPosition: {x: -1.923343, y: 0.87, z: -3.507243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -653,6 +653,9 @@ MonoBehaviour:
   cinemachineCamera: {fileID: 5607490921869092034}
   aimBot_IsTarget: 0
   aimBot_Target: {fileID: 0}
+  aimBot_TimeNoMove: 0.25
+  aimBot_TurnSmoothTime: 0.5
+  lookAtSpeed: 3
 --- !u!143 &8741707619534854585
 CharacterController:
   m_ObjectHideFlags: 0
@@ -709,9 +712,7 @@ MonoBehaviour:
     domage: 10
     range: 100
   cam: {fileID: 4138484005632116927}
-  mask:
-    serializedVersion: 2
-    m_Bits: 183
+  characterController: {fileID: 8741707619534854585}
   vfx:
   - {fileID: 7584943179759472836, guid: 5747a324918df724cbf8cc9df09e9d05, type: 3}
   timeBeforeThrowEffect: 0.3
@@ -719,12 +720,11 @@ MonoBehaviour:
   anim: {fileID: 4834402899435916564}
   netAnim: {fileID: -9189918615910084075}
   playerController: {fileID: 9059515218701028872}
-  aimBot_Range: 3
+  aimBot_Range: 5
   aimBot_ActualTarget: {fileID: 0}
   aimBot_maxEntitiesBeforeLivingTarget: 3
   aimBot_filterTag:
   - Player
-  - test
   targetsList: []
 --- !u!114 &895996424391727265
 MonoBehaviour:
@@ -969,7 +969,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7800893621490984317}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.87, z: -4}
+  m_LocalPosition: {x: -1.923343, y: 0.87, z: -3.507243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1137,7 +1137,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8075344944827351553}
-  m_LocalRotation: {x: 0.04958144, y: -0.000000017714115, z: 8.7937274e-10, w: 0.9987701}
+  m_LocalRotation: {x: 0.048030198, y: 0.24787743, z: -0.012305253, w: 0.9675219}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

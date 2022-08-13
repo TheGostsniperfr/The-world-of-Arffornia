@@ -11,8 +11,7 @@ public class PlayerAttack : NetworkBehaviour
     [SerializeField]
     private Camera cam;
 
-    [SerializeField]
-    private LayerMask mask;
+    [SerializeField] private CharacterController characterController;
 
 
     //attack with fireball
@@ -64,12 +63,15 @@ public class PlayerAttack : NetworkBehaviour
             aimBot();
 
 
-            if (Input.GetButtonDown("Fire1") && ((timeThrowEffect+cooldownNextAttack) <= Time.time))
+            if (Input.GetButtonDown("Fire1") && ((timeThrowEffect+cooldownNextAttack) <= Time.time) && characterController.isGrounded)
             {
 
                 //Attack
-                playerController.aimBot_ApplyTarget();
-                
+                if (aimBot_ActualTarget != null)
+                {
+                    //camera target focus
+                    playerController.aimBot_ApplyTarget();
+                }
                 netAnim.SetTrigger("throwProjectil");
 
 
@@ -114,7 +116,6 @@ public class PlayerAttack : NetworkBehaviour
         if (aimBot_ActualTarget != newTarget)
         {
             //update target
-            Debug.Log("update and send target");
             sendTarget();
         }
 
@@ -190,7 +191,7 @@ public class PlayerAttack : NetworkBehaviour
         return targetsList;
     }
 
-    [Command]
+    [Command(requiresAuthority = false)]
     private void FireBallAttack()
     {
         GameObject vfx;
@@ -204,11 +205,32 @@ public class PlayerAttack : NetworkBehaviour
             vfx.transform.localRotation = player.transform.rotation;
 
 
+            if (aimBot_ActualTarget != null)
+            {
+                //calcule difference angle between player and target
+
+                /*
+                Vector3 dir = aimBot_ActualTarget.transform.position - transform.position;
+
+                float angle = Mathf.Atan2(dir.x, dir.y) * Mathf.Rad2Deg + 90;
+                
+                vfx.transform.Rotate(-angle, 0, 0, Space.Self);
+                */
+
+                float angle = Mathf.Atan(aimBot_ActualTarget.transform.position.y - transform.position.y) * Mathf.Rad2Deg;
+                vfx.transform.Rotate(-angle/2, 0, 0);
+
+                Debug.Log("angle : " + angle + " target : " + aimBot_ActualTarget);
+
+            }
+
             fireballController = vfx.GetComponent<FireballController>();
             fireballController.playerOrigine = transform.name;
 
 
-            Debug.Log("islocalPlayer /!\\ : " + transform.name);
+
+
+
 
 
 

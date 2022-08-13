@@ -57,6 +57,7 @@ public class PlayerController : NetworkBehaviour
     [SerializeField] private float aimBot_TimeNoMove = 0.25f;
     [SerializeField] private float aimBot_TurnSmoothTime = 0.5f;
     private float aimBot_TurnSmoothVelocity;
+    [SerializeField] private float lookAtSpeed = 3f;
 
 
     private void Update()
@@ -70,7 +71,13 @@ public class PlayerController : NetworkBehaviour
             else
             {
                 //stop all move animation
-                isSprinting = false;
+                if (isSprinting)
+                {
+                    isSprinting = false;
+                    speed /= speedSprintMultiplicator;
+                    turnSmoothTime /= speedTurnSmoothMultiplicator;
+                }
+
                 anim.SetBool("isWalking", false);
                 anim.SetBool("isSprinting", false);
             }
@@ -215,7 +222,7 @@ public class PlayerController : NetworkBehaviour
     {
         //on attack button clicked
         //rotate player and camera
-        StartCoroutine(aimBot_lookAt());
+        StartCoroutine(aimBot_lookAt(aimBot_Target));
 
         //stop player
         aimBot_IsTarget = true;
@@ -224,9 +231,10 @@ public class PlayerController : NetworkBehaviour
 
     
 
-    public IEnumerator aimBot_lookAt()
+    private IEnumerator aimBot_lookAt(GameObject target)
     {
-        Quaternion lookRotation = Quaternion.LookRotation(aimBot_Target.gameObject.transform.position - transform.position);
+        Quaternion lookRotation = Quaternion.LookRotation(target.transform.position - transform.position);
+
         float time = 0;
         
         
@@ -244,7 +252,7 @@ public class PlayerController : NetworkBehaviour
             float _angle = Mathf.SmoothDampAngle(cinemachineCamera.m_XAxis.Value, rotationToTarget.eulerAngles.y, ref aimBot_TurnSmoothVelocity, aimBot_TurnSmoothTime);
             cinemachineCamera.m_XAxis.Value = _angle;
 
-            time += Time.deltaTime * speed;
+            time += Time.deltaTime * lookAtSpeed;
 
             yield return null;
         }
@@ -252,8 +260,10 @@ public class PlayerController : NetworkBehaviour
 
         aimBot_IsTarget = false;
 
-        StopCoroutine(aimBot_lookAt());
+        StopCoroutine(aimBot_lookAt(null));
 
     }
+
+    
 
 }

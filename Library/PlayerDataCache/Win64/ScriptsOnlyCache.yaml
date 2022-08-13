@@ -32,8 +32,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -1017,7 +1019,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: 643e68f30691ade3e0ec0e8fd7e5a7f8
+      Hash: 904b42a5ee492d9419e67939512c27b4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -1113,7 +1115,7 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 9ee1754612001676b77de7f5892beb67
+      Hash: 3543c4a823941aa93a72fcc9082afef1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerAttack
