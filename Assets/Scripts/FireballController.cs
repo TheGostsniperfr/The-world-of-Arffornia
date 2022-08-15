@@ -73,7 +73,7 @@ public class FireballController : NetworkBehaviour
 
 
     [Command(requiresAuthority = false)]
-    private void CmdPlayerAttack(string playerName, float damage)
+    private void CmdPlayerAttack(string playerName, int damage)
     {
 
         Player player = GameManager.GetPlayer(playerName);
@@ -109,7 +109,7 @@ public class FireballController : NetworkBehaviour
             if(player.gameObject.tag == "Player")
             {
                 //take damage
-                CmdPlayerAttack(player.name, 30f);
+                CmdPlayerAttack(player.name, 30);
             }
         }
     }   

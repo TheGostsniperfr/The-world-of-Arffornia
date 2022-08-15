@@ -689,6 +689,8 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   maxHealth: 100
+  healthBar: {fileID: 3995618058323226607, guid: e13f6c390c9c74d4499d4d9332f21338,
+    type: 3}
   disableOnDeath:
   - {fileID: 9059515218701028872}
   - {fileID: 190424490302649992}

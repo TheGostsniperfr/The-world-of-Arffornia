@@ -13,10 +13,11 @@ public class Player : NetworkBehaviour
     }
 
     [SerializeField]
-    private float maxHealth = 100f;
+    private int maxHealth = 100;
 
     [SyncVar]
-    private float currentHealth;
+    private int currentHealth;
+    [SerializeField] private HealthBar healthBar;
 
     [SerializeField]
     private Behaviour[] disableOnDeath;
@@ -39,6 +40,9 @@ public class Player : NetworkBehaviour
     {
         isDead = false;
         currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+        healthBar.SetHealth(currentHealth);
+
 
         for (int i = 0; i < disableOnDeath.Length; i++)
         {
@@ -75,7 +79,7 @@ public class Player : NetworkBehaviour
     }
 
     [ClientRpc]
-    public void RpcTakeDamage(float amount)
+    public void RpcTakeDamage(int amount)
     {
         if (isDead)
         {
@@ -83,7 +87,9 @@ public class Player : NetworkBehaviour
         }
 
         currentHealth -= amount;
+        healthBar.SetHealth(currentHealth);
         Debug.Log(transform.name + " a maintenant : " + currentHealth + " points de vies.");
+
 
         if (currentHealth <= 0)
         {
