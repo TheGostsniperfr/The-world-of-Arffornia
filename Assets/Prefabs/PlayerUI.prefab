@@ -243,6 +243,7 @@ MonoBehaviour:
     m_NumColorKeys: 4
     m_NumAlphaKeys: 2
   fill: {fileID: 3925150469332867623}
+  speedTransitionHealth: 1
 --- !u!1 &3925150468531834540
 GameObject:
   m_ObjectHideFlags: 0

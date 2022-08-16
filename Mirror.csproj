@@ -63,8 +63,8 @@
     <Compile Include="Assets\Mirror\Runtime\NetworkClient.cs" />
     <Compile Include="Assets\Mirror\Runtime\AssemblyInfo.cs" />
     <Compile Include="Assets\Mirror\Runtime\Empty\FallbackTransport.cs" />
-    <Compile Include="Assets\Mirror\Runtime\NetworkLoop.cs" />
     <Compile Include="Assets\Mirror\Runtime\Transports\LatencySimulation.cs" />
+    <Compile Include="Assets\Mirror\Runtime\NetworkLoop.cs" />
     <Compile Include="Assets\Mirror\Runtime\Transports\Telepathy\TelepathyTransport.cs" />
     <Compile Include="Assets\Mirror\Runtime\NetworkWriter.cs" />
     <Compile Include="Assets\Mirror\Runtime\Empty\LogFilter.cs" />

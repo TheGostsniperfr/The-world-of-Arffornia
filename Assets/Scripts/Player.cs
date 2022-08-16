@@ -41,11 +41,14 @@ public class Player : NetworkBehaviour
 
     public void SetDefaults()
     {
-        playerUI = playerSetup.playerUIInstance.GetComponent<PlayerUI>();
+        if (isLocalPlayer)
+        {
+            playerUI = playerSetup.playerUIInstance.GetComponent<PlayerUI>();
+        }
 
         isDead = false;
         currentHealth = maxHealth;
-        playerUI.SetMaxHealth(maxHealth);
+        playerUI.SetMaxHealth(currentHealth ,maxHealth);
         playerUI.SetHealth(currentHealth);
 
 

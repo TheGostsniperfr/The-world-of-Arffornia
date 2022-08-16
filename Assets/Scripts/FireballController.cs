@@ -24,7 +24,7 @@ public class FireballController : NetworkBehaviour
     private void Start()
     {
         originePosition = transform.position;
-        Debug.Log("Fireball playerThrow : " + playerOrigine);
+        //Debug.Log("Fireball playerThrow : " + playerOrigine);
     }
 
 
@@ -58,7 +58,7 @@ public class FireballController : NetworkBehaviour
 
             if (collider.transform.name != playerOrigine)
             {
-                Debug.Log("colliderName : " + collider.name);
+                //Debug.Log("colliderName : " + collider.name);
 
                 Explode();
                 FireballDestroy();
@@ -67,7 +67,7 @@ public class FireballController : NetworkBehaviour
         }
         else
         {
-            Debug.Log("playerOrigine est null");
+            Debug.LogError("playerOrigine est null");
         }
     }
 

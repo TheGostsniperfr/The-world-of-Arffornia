@@ -220,7 +220,7 @@ public class PlayerAttack : NetworkBehaviour
                 float angle = Mathf.Atan(aimBot_ActualTarget.transform.position.y - transform.position.y) * Mathf.Rad2Deg;
                 vfx.transform.Rotate(-angle/2, 0, 0);
 
-                Debug.Log("angle : " + angle + " target : " + aimBot_ActualTarget);
+                //Debug.Log("angle : " + angle + " target : " + aimBot_ActualTarget);
 
             }
 

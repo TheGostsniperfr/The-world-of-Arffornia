@@ -327,6 +327,7 @@
 -r:"D:/Program Files/Unity Hub/Editor/2021.3.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.WindModule.dll"
 -r:"D:/Program Files/Unity Hub/Editor/2021.3.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.XRModule.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Cinemachine.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aP.dag/Coffee.SoftMaskForUGUI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/kcp2k.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Mirror.Authenticators.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Mirror.Components.ref.dll"
@@ -340,7 +341,7 @@
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.Timeline.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/where-allocations.ref.dll"
-"Assets/Explosion01Controller.cs"
+"Assets/Scripts/Explosion01Controller.cs"
 "Assets/Scripts/FireballController.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/GameSettings.cs"
@@ -348,6 +349,7 @@
 "Assets/Scripts/PlayerAttack.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/PlayerSetup.cs"
+"Assets/Scripts/PlayerUI.cs"
 "Assets/Scripts/PlayerWeapon.cs"
 -langversion:9.0
 
