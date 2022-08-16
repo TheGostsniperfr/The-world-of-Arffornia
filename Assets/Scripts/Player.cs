@@ -16,7 +16,8 @@ public class Player : NetworkBehaviour
     private int maxHealth = 100;
 
     [SyncVar]
-    private int currentHealth;
+    private float currentHealth;
+    private float tempoHealth;
     private PlayerUI playerUI;
 
     [SerializeField]
@@ -26,42 +27,27 @@ public class Player : NetworkBehaviour
     public CharacterController characterController;
     [SerializeField] private PlayerSetup playerSetup;
 
+
     public void Setup()
     {
-
-        
-
-
         wasEnabledOnStart = new bool[disableOnDeath.Length];
         for (int i = 0; i < disableOnDeath.Length; i++)
         {
             wasEnabledOnStart[i] = disableOnDeath[i].enabled;
         }
-        
-
         SetDefaults();
-        
-
     }
 
     public void SetDefaults()
     {
-        
-        
-        
+        isDead = false;
+        currentHealth = maxHealth;
+        tempoHealth = currentHealth;
 
-
-            isDead = false;
-            currentHealth = maxHealth;
-            
-
-
-            for (int i = 0; i < disableOnDeath.Length; i++)
-            {
-                disableOnDeath[i].enabled = wasEnabledOnStart[i];
-            }
-        
-
+        for (int i = 0; i < disableOnDeath.Length; i++)
+        {
+            disableOnDeath[i].enabled = wasEnabledOnStart[i];
+        }
 
         if (isLocalPlayer)
         {
@@ -73,7 +59,6 @@ public class Player : NetworkBehaviour
 
             playerUI.SetMaxHealth(currentHealth, maxHealth);
             playerUI.SetHealth(currentHealth);
-
         }
 
     }
@@ -88,7 +73,6 @@ public class Player : NetworkBehaviour
         characterController.transform.position = spawnPoint.position;
         characterController.transform.rotation = spawnPoint.rotation;
         characterController.enabled = true;
-
     }
 
     private void Update()
@@ -97,13 +81,19 @@ public class Player : NetworkBehaviour
         {
             return;
         }
+        else
+        {
+            if(currentHealth != tempoHealth)
+            {
+                playerUI.SetHealth(currentHealth);
+            }
+        }
 
         if (Input.GetKeyDown(KeyCode.K))
         {
             RpcTakeDamage(100);
         }
 
-        playerUI.SetHealth(currentHealth);
 
     }
 
@@ -135,9 +125,7 @@ public class Player : NetworkBehaviour
             disableOnDeath[i].enabled = false;
         }
 
-
-        Debug.Log(transform.name + " a été éliminé.");
-
+        Debug.Log(transform.name + " a ?t? ?limin?.");
         StartCoroutine(Respawn());
     }
 }

@@ -1,12 +1,14 @@
 
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerUI : MonoBehaviour
 {
     [SerializeField] private Slider slider;
     [SerializeField] private Gradient gradient;
     [SerializeField] Image fill;
+    [SerializeField] private TextMeshProUGUI textMesh;
 
     [SerializeField] private float speedTransitionHealth;
     [SerializeField] private float timeActualTransitionHealth = 0;
@@ -24,12 +26,12 @@ public class PlayerUI : MonoBehaviour
             HealthTransition();
         }
     }
-    public void SetHealth(int _newHealth)
+    public void SetHealth(float _newHealth)
     {
         newHealth = _newHealth;        
     }
 
-    public void SetMaxHealth(int currentHealth, int maxHealth)
+    public void SetMaxHealth(float currentHealth, float maxHealth)
     {
         slider.value = currentHealth;
         slider.maxValue = maxHealth;
@@ -44,8 +46,9 @@ public class PlayerUI : MonoBehaviour
         timeActualTransitionHealth += Time.deltaTime * speedTransitionHealth;
         slider.value = Mathf.Lerp(currentHealth, newHealth, timeActualTransitionHealth);
 
- 
-        fill.color = gradient.Evaluate(slider.value);
+        textMesh.text = Mathf.Round(slider.value) + " / " + slider.maxValue;
+
+        fill.color = gradient.Evaluate(slider.value / slider.maxValue);
 
         if (slider.value == newHealth)
         {

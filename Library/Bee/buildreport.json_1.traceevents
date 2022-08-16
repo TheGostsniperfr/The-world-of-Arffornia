@@ -1,398 +1,401 @@
 { "pid": 0, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "BeeDriver" } },
 { "pid": 0, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-2" } },
 { "pid": 0, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
-{ "pid": 0, "tid": 1, "ts": 1660665872848110, "dur": 784017, "ph": "X", "name": "Build ScriptAssemblies", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1660665872849621, "dur": 32755, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1660665872882643, "dur": 739622, "ph": "X", "name": "Run Backend", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1660665873622285, "dur": 9842, "ph": "X", "name": "Finish", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1660665876197948, "dur": 89632, "ph": "X", "name": "Build Player", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1660665876198213, "dur": 12455, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1660665876210670, "dur": 75089, "ph": "X", "name": "Run Backend", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1660665876285761, "dur": 1818, "ph": "X", "name": "Finish", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1660665876288233, "dur": 25, "ph": "X", "name": "", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1660682725439133, "dur": 891710, "ph": "X", "name": "Build ScriptAssemblies", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1660682725440640, "dur": 23636, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1660682725464545, "dur": 856182, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1660682726320747, "dur": 10096, "ph": "X", "name": "Finish", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1660682729067378, "dur": 89826, "ph": "X", "name": "Build Player", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1660682729067690, "dur": 11788, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1660682729079482, "dur": 66913, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1660682729146396, "dur": 10807, "ph": "X", "name": "Finish", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1660682729157806, "dur": 18, "ph": "X", "name": "", "args": {} },
 { "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
-,{ "pid":12345, "tid":0, "ts":1660665876238855, "dur":1522, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876240388, "dur":110, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
-,{ "pid":12345, "tid":0, "ts":1660665876240517, "dur":18, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
-,{ "pid":12345, "tid":0, "ts":1660665876240536, "dur":704, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
-,{ "pid":12345, "tid":0, "ts":1660665876241312, "dur":617, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876241929, "dur":1, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876268903, "dur":235, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876269138, "dur":46, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876269184, "dur":5, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876269189, "dur":28, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876269217, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876269220, "dur":24, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876269244, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876269247, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876269255, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876269257, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876269265, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876269267, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876269274, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876269277, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876269284, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876269286, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876269292, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876269295, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876269302, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876269304, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876269311, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876269313, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876269319, "dur":4, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876269323, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876269329, "dur":0, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876269350, "dur":3, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876269366, "dur":2214, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
-,{ "pid":12345, "tid":1, "ts":1660665876241162, "dur":774, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1660665876241938, "dur":6384, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1660665876248336, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
-,{ "pid":12345, "tid":1, "ts":1660665876248338, "dur":52, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1660665876248398, "dur":2, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/app.info" }}
-,{ "pid":12345, "tid":1, "ts":1660665876248400, "dur":92, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1660665876248492, "dur":27, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
-,{ "pid":12345, "tid":1, "ts":1660665876248519, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1660665876248595, "dur":86, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.XRModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1660665876248681, "dur":84, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1660665876248766, "dur":84, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1660665876248850, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1660665876248910, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.TilemapModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1660665876248976, "dur":66, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1660665876249043, "dur":84, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1660665876249127, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1660665876249186, "dur":77, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.InputModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1660665876249263, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1660665876249321, "dur":140, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.CoreModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1660665876249462, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1660665876249530, "dur":344, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":1, "ts":1660665876249875, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1660665876249947, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.Transactions.dll" }}
-,{ "pid":12345, "tid":1, "ts":1660665876250013, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1660665876250076, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.Drawing.dll" }}
-,{ "pid":12345, "tid":1, "ts":1660665876250140, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1660665876250201, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Newtonsoft.Json.dll" }}
-,{ "pid":12345, "tid":1, "ts":1660665876250271, "dur":52, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1660665876250324, "dur":211, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
-,{ "pid":12345, "tid":1, "ts":1660665876250535, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1660665876250605, "dur":70, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/resources.assets" }}
-,{ "pid":12345, "tid":1, "ts":1660665876250680, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1660665876252344, "dur":3150, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/The world of Arffornia_Data/resources.assets" }}
-,{ "pid":12345, "tid":1, "ts":1660665876255545, "dur":13378, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1660665876241165, "dur":775, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1660665876241940, "dur":6395, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1660665876248336, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/web.config" }}
-,{ "pid":12345, "tid":2, "ts":1660665876248410, "dur":115, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1660665876248526, "dur":35, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/UnityCrashHandler64.exe" }}
-,{ "pid":12345, "tid":2, "ts":1660665876248562, "dur":111, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1660665876248674, "dur":83, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1660665876248757, "dur":79, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1660665876248837, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1660665876248905, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1660665876248977, "dur":70, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.StreamingModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1660665876249048, "dur":67, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1660665876249117, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1660665876249181, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1660665876249239, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1660665876249305, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1660665876249366, "dur":108, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.AnimationModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1660665876249474, "dur":188, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1660665876249663, "dur":213, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Unity.Services.Core.Device.dll" }}
-,{ "pid":12345, "tid":2, "ts":1660665876249876, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1660665876249939, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.Xml.dll" }}
-,{ "pid":12345, "tid":2, "ts":1660665876249999, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1660665876250058, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.IO.Compression.FileSystem.dll" }}
-,{ "pid":12345, "tid":2, "ts":1660665876250122, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1660665876250184, "dur":240, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/SimpleWebTransport.dll" }}
-,{ "pid":12345, "tid":2, "ts":1660665876250424, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1660665876250487, "dur":192, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/ScriptingAssemblies.json" }}
-,{ "pid":12345, "tid":2, "ts":1660665876250680, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1660665876250743, "dur":158, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/boot.config" }}
-,{ "pid":12345, "tid":2, "ts":1660665876250902, "dur":47, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1660665876250949, "dur":18006, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1660665876241220, "dur":726, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1660665876241947, "dur":6383, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1660665876248336, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
-,{ "pid":12345, "tid":3, "ts":1660665876248397, "dur":123, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1660665876248521, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
-,{ "pid":12345, "tid":3, "ts":1660665876248579, "dur":88, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1660665876248668, "dur":93, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.VideoModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1660665876248762, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1660665876248834, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UmbraModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1660665876248892, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1660665876248946, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1660665876249014, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1660665876249076, "dur":65, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.Physics2DModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1660665876249141, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1660665876249203, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.HotReloadModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1660665876249277, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1660665876249338, "dur":130, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1660665876249468, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1660665876249534, "dur":412, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Unity.Services.Core.Threading.dll" }}
-,{ "pid":12345, "tid":3, "ts":1660665876249946, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1660665876250010, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.Runtime.Serialization.dll" }}
-,{ "pid":12345, "tid":3, "ts":1660665876250073, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1660665876250135, "dur":65, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.Core.dll" }}
-,{ "pid":12345, "tid":3, "ts":1660665876250200, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1660665876250261, "dur":287, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/kcp2k.dll" }}
-,{ "pid":12345, "tid":3, "ts":1660665876250548, "dur":85, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1660665876250634, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/globalgamemanagers.assets" }}
-,{ "pid":12345, "tid":3, "ts":1660665876250699, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1660665876253102, "dur":2605, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/The world of Arffornia_Data/globalgamemanagers.assets" }}
-,{ "pid":12345, "tid":3, "ts":1660665876255749, "dur":13181, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1660665876241259, "dur":694, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1660665876241953, "dur":6420, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1660665876248377, "dur":33, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
-,{ "pid":12345, "tid":4, "ts":1660665876248410, "dur":112, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1660665876248523, "dur":78, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/UnityPlayer.dll" }}
-,{ "pid":12345, "tid":4, "ts":1660665876248601, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1660665876248671, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.VehiclesModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1660665876248745, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1660665876248815, "dur":70, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1660665876248885, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1660665876248954, "dur":72, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1660665876249026, "dur":67, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1660665876249094, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1660665876249164, "dur":66, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1660665876249230, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.GameCenterModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1660665876249298, "dur":159, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1660665876249458, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1660665876249524, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1660665876249584, "dur":405, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Unity.Services.Core.Internal.dll" }}
-,{ "pid":12345, "tid":4, "ts":1660665876249989, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1660665876250051, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.Net.Http.dll" }}
-,{ "pid":12345, "tid":4, "ts":1660665876250108, "dur":171, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1660665876250280, "dur":86, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/clipper_library.dll" }}
-,{ "pid":12345, "tid":4, "ts":1660665876250367, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1660665876250428, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/sharedassets0.assets" }}
-,{ "pid":12345, "tid":4, "ts":1660665876250554, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1660665876251182, "dur":4679, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/The world of Arffornia_Data/sharedassets0.assets" }}
-,{ "pid":12345, "tid":4, "ts":1660665876255904, "dur":13055, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1660665876241299, "dur":659, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1660665876241958, "dur":6408, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1660665876248369, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/web.config" }}
-,{ "pid":12345, "tid":5, "ts":1660665876248408, "dur":161, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1660665876248570, "dur":165, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia.exe" }}
-,{ "pid":12345, "tid":5, "ts":1660665876248735, "dur":76, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1660665876248812, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1660665876248870, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1660665876248927, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1660665876248982, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1660665876249045, "dur":78, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1660665876249123, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1660665876249191, "dur":84, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1660665876249276, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1660665876249340, "dur":137, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.ClothModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1660665876249477, "dur":135, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1660665876249613, "dur":219, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Unity.Services.Core.dll" }}
-,{ "pid":12345, "tid":5, "ts":1660665876249833, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1660665876249897, "dur":215, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Telepathy.dll" }}
-,{ "pid":12345, "tid":5, "ts":1660665876250112, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1660665876250169, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.ComponentModel.Composition.dll" }}
-,{ "pid":12345, "tid":5, "ts":1660665876250219, "dur":101, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1660665876250320, "dur":282, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":5, "ts":1660665876250608, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1660665876252050, "dur":2333, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/The world of Arffornia_Data/Managed/Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":5, "ts":1660665876254428, "dur":14520, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1660665876241341, "dur":622, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1660665876241964, "dur":6417, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1660665876248384, "dur":42, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
-,{ "pid":12345, "tid":6, "ts":1660665876248426, "dur":87, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1660665876248514, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/browscap.ini" }}
-,{ "pid":12345, "tid":6, "ts":1660665876248537, "dur":125, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1660665876248663, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1660665876248731, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1660665876248801, "dur":72, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1660665876248873, "dur":67, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1660665876248941, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1660665876249002, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1660665876249072, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.ProfilerModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1660665876249133, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1660665876249192, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.IMGUIModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1660665876249253, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1660665876249314, "dur":138, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1660665876249452, "dur":102, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1660665876249555, "dur":369, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Unity.Services.Core.Networking.dll" }}
-,{ "pid":12345, "tid":6, "ts":1660665876249924, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1660665876249979, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.Security.dll" }}
-,{ "pid":12345, "tid":6, "ts":1660665876250038, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1660665876250097, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.dll" }}
-,{ "pid":12345, "tid":6, "ts":1660665876250164, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1660665876250220, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Mono.Security.dll" }}
-,{ "pid":12345, "tid":6, "ts":1660665876250277, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1660665876250332, "dur":110, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/sharedassets0.assets.resS" }}
-,{ "pid":12345, "tid":6, "ts":1660665876250552, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1660665876251639, "dur":17189, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/The world of Arffornia_Data/sharedassets0.assets.resS" }}
-,{ "pid":12345, "tid":6, "ts":1660665876268871, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
-,{ "pid":12345, "tid":6, "ts":1660665876268872, "dur":0, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1660665876241369, "dur":599, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1660665876241968, "dur":6380, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1660665876248352, "dur":72, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
-,{ "pid":12345, "tid":7, "ts":1660665876248424, "dur":72, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1660665876248497, "dur":98, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/config" }}
-,{ "pid":12345, "tid":7, "ts":1660665876248595, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1660665876248672, "dur":88, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1660665876248760, "dur":66, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1660665876248826, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UNETModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1660665876248883, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1660665876248942, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1660665876249008, "dur":55, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1660665876249063, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1660665876249123, "dur":76, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1660665876249199, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1660665876249258, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1660665876249323, "dur":146, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1660665876249469, "dur":73, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1660665876249544, "dur":279, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
-,{ "pid":12345, "tid":7, "ts":1660665876249823, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1660665876249898, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.Xml.Linq.dll" }}
-,{ "pid":12345, "tid":7, "ts":1660665876249958, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1660665876250013, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.Numerics.dll" }}
-,{ "pid":12345, "tid":7, "ts":1660665876250081, "dur":55, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1660665876250136, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.Configuration.dll" }}
-,{ "pid":12345, "tid":7, "ts":1660665876250206, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1660665876250264, "dur":240, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Coffee.SoftMaskForUGUI.dll" }}
-,{ "pid":12345, "tid":7, "ts":1660665876250504, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1660665876250570, "dur":192, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/RuntimeInitializeOnLoads.json" }}
-,{ "pid":12345, "tid":7, "ts":1660665876250762, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1660665876250816, "dur":18088, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1660665876241403, "dur":570, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1660665876241973, "dur":6415, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1660665876248388, "dur":26, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":8, "ts":1660665876248414, "dur":80, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1660665876248495, "dur":20, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":8, "ts":1660665876248515, "dur":83, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1660665876248599, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.WindModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1660665876248673, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1660665876248738, "dur":78, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1660665876248816, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1660665876248881, "dur":423, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":8, "ts":1660665876249305, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1660665876249362, "dur":109, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.ARModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1660665876249471, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1660665876249532, "dur":621, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":8, "ts":1660665876250153, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1660665876250215, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/mscorlib.dll" }}
-,{ "pid":12345, "tid":8, "ts":1660665876250272, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1660665876250331, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Resources/unity_builtin_extra" }}
-,{ "pid":12345, "tid":8, "ts":1660665876250410, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1660665876250967, "dur":3369, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/The world of Arffornia_Data/Resources/unity_builtin_extra" }}
-,{ "pid":12345, "tid":8, "ts":1660665876254402, "dur":14540, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1660665876241427, "dur":552, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1660665876241979, "dur":6361, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1660665876248344, "dur":35, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
-,{ "pid":12345, "tid":9, "ts":1660665876248379, "dur":111, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1660665876248492, "dur":29, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
-,{ "pid":12345, "tid":9, "ts":1660665876248521, "dur":134, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1660665876248656, "dur":118, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.VRModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1660665876248774, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1660665876248835, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UIModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1660665876248896, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1660665876248955, "dur":70, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.SubstanceModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1660665876249026, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1660665876249095, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1660665876249165, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1660665876249230, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.GIModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1660665876249298, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1660665876249361, "dur":110, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1660665876249472, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1660665876249543, "dur":469, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
-,{ "pid":12345, "tid":9, "ts":1660665876250013, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1660665876250075, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.EnterpriseServices.dll" }}
-,{ "pid":12345, "tid":9, "ts":1660665876250137, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1660665876250213, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/netstandard.dll" }}
-,{ "pid":12345, "tid":9, "ts":1660665876250267, "dur":52, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1660665876250320, "dur":506, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Cinemachine.dll" }}
-,{ "pid":12345, "tid":9, "ts":1660665876250826, "dur":44, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1660665876250870, "dur":18031, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1660665876241453, "dur":530, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1660665876241984, "dur":6349, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1660665876248336, "dur":43, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":10, "ts":1660665876248379, "dur":77, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1660665876248457, "dur":21, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":10, "ts":1660665876248478, "dur":95, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1660665876248573, "dur":260, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/where-allocations.dll" }}
-,{ "pid":12345, "tid":10, "ts":1660665876248833, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1660665876248903, "dur":72, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.TLSModule.dll" }}
-,{ "pid":12345, "tid":10, "ts":1660665876248975, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1660665876249050, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
-,{ "pid":12345, "tid":10, "ts":1660665876249115, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1660665876249177, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
-,{ "pid":12345, "tid":10, "ts":1660665876249241, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1660665876249302, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.DirectorModule.dll" }}
-,{ "pid":12345, "tid":10, "ts":1660665876249365, "dur":110, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1660665876249476, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
-,{ "pid":12345, "tid":10, "ts":1660665876249544, "dur":67, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1660665876249612, "dur":206, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Unity.Services.Core.Environments.dll" }}
-,{ "pid":12345, "tid":10, "ts":1660665876249818, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1660665876249877, "dur":190, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Unity.Services.Core.Analytics.dll" }}
-,{ "pid":12345, "tid":10, "ts":1660665876250067, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1660665876250125, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.Data.DataSetExtensions.dll" }}
-,{ "pid":12345, "tid":10, "ts":1660665876250185, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1660665876250243, "dur":383, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Mirror.Components.dll" }}
-,{ "pid":12345, "tid":10, "ts":1660665876250626, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1660665876250688, "dur":44, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/globalgamemanagers" }}
-,{ "pid":12345, "tid":10, "ts":1660665876250737, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1660665876253517, "dur":2339, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/The world of Arffornia_Data/globalgamemanagers" }}
-,{ "pid":12345, "tid":10, "ts":1660665876255901, "dur":13015, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1660665876241496, "dur":492, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1660665876241988, "dur":6371, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1660665876248362, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":11, "ts":1660665876248423, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1660665876248486, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/web.config" }}
-,{ "pid":12345, "tid":11, "ts":1660665876248522, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1660665876248572, "dur":25, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Resources/unity default resources" }}
-,{ "pid":12345, "tid":11, "ts":1660665876248597, "dur":72, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1660665876248669, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.VFXModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1660665876248736, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1660665876248801, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1660665876248869, "dur":78, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1660665876248948, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.TerrainModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1660665876249003, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1660665876249073, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.PhysicsModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1660665876249134, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1660665876249205, "dur":80, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.GridModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1660665876249286, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1660665876249347, "dur":131, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.AudioModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1660665876249478, "dur":67, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1660665876249545, "dur":346, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Unity.Services.Core.Registration.dll" }}
-,{ "pid":12345, "tid":11, "ts":1660665876249891, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1660665876249951, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.ServiceModel.Internals.dll" }}
-,{ "pid":12345, "tid":11, "ts":1660665876250009, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1660665876250066, "dur":54, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.IO.Compression.dll" }}
-,{ "pid":12345, "tid":11, "ts":1660665876250120, "dur":131, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1660665876250252, "dur":297, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Mirror.Authenticators.dll" }}
-,{ "pid":12345, "tid":11, "ts":1660665876250550, "dur":66, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1660665876250616, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/level0" }}
-,{ "pid":12345, "tid":11, "ts":1660665876250684, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1660665876252699, "dur":2748, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/The world of Arffornia_Data/level0" }}
-,{ "pid":12345, "tid":11, "ts":1660665876255492, "dur":13444, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1660665876241531, "dur":462, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1660665876241993, "dur":6361, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1660665876248356, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":12, "ts":1660665876248408, "dur":111, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1660665876248520, "dur":40, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
-,{ "pid":12345, "tid":12, "ts":1660665876248561, "dur":113, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1660665876248674, "dur":124, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1660665876248798, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1660665876248856, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UIElementsModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1660665876248912, "dur":76, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1660665876248989, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1660665876249058, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1660665876249124, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.LocalizationModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1660665876249197, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1660665876249258, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.dll" }}
-,{ "pid":12345, "tid":12, "ts":1660665876249319, "dur":143, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1660665876249463, "dur":65, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.AIModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1660665876249528, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1660665876249589, "dur":207, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
-,{ "pid":12345, "tid":12, "ts":1660665876249796, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1660665876249855, "dur":195, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Unity.Services.Core.Configuration.dll" }}
-,{ "pid":12345, "tid":12, "ts":1660665876250050, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1660665876250110, "dur":71, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.Data.dll" }}
-,{ "pid":12345, "tid":12, "ts":1660665876250181, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1660665876250238, "dur":509, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Mirror.dll" }}
-,{ "pid":12345, "tid":12, "ts":1660665876250747, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1660665876250808, "dur":18098, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1660665876273240, "dur":1501, "ph":"X", "name": "ProfilerWriteOutput" }
-,{ "pid": 0, "tid": 1, "ts": 1660665876288370, "dur": 930, "ph": "X", "name": "backend_profiler0.traceevents", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1660665876288218, "dur": 1113, "ph": "X", "name": "Write chrome-trace events", "args": {} },
+,{ "pid":12345, "tid":0, "ts":1660682729106713, "dur":1556, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729108281, "dur":111, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
+,{ "pid":12345, "tid":0, "ts":1660682729108410, "dur":20, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
+,{ "pid":12345, "tid":0, "ts":1660682729108431, "dur":663, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
+,{ "pid":12345, "tid":0, "ts":1660682729109143, "dur":652, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729109795, "dur":1, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729137560, "dur":233, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729137793, "dur":68, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729137861, "dur":51, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729137912, "dur":9, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729137921, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729137923, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729137931, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729137933, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729137941, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729137943, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729137949, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729137952, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729137958, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729137960, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729137967, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729137969, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729137975, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729137978, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729137984, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729137987, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729137994, "dur":5, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729137999, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729138007, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729138009, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729138016, "dur":0, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729138035, "dur":2, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729138038, "dur":1974, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1660682729109080, "dur":721, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1660682729109803, "dur":6393, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1660682729116218, "dur":5, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1660682729116224, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1660682729116291, "dur":4, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1660682729116295, "dur":88, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1660682729116383, "dur":34, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":1, "ts":1660682729116417, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1660682729116487, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1660682729116538, "dur":73, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1660682729116612, "dur":172, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1660682729116784, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1660682729116847, "dur":283, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1660682729117130, "dur":97, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1660682729117228, "dur":152, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1660682729117380, "dur":77, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1660682729117458, "dur":346, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":1, "ts":1660682729117804, "dur":83, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1660682729117888, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":1, "ts":1660682729117946, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1660682729118007, "dur":116, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":1, "ts":1660682729118123, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1660682729118189, "dur":274, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Mirror.Authenticators.dll" }}
+,{ "pid":12345, "tid":1, "ts":1660682729118463, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1660682729118525, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":1, "ts":1660682729118594, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1660682729120745, "dur":5120, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/The world of Arffornia_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":1, "ts":1660682729125916, "dur":11651, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1660682729109130, "dur":684, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1660682729109814, "dur":6408, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1660682729116223, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":2, "ts":1660682729116281, "dur":115, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1660682729116397, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":2, "ts":1660682729116420, "dur":67, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1660682729116488, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1660682729116556, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1660682729116617, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1660682729116684, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1660682729116750, "dur":70, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1660682729116821, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1660682729116885, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1660682729116949, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1660682729117019, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1660682729117082, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1660682729117151, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1660682729117225, "dur":154, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1660682729117380, "dur":70, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1660682729117450, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1660682729117508, "dur":229, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":2, "ts":1660682729117737, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1660682729117808, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":2, "ts":1660682729117870, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1660682729117928, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":2, "ts":1660682729117995, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1660682729118059, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":2, "ts":1660682729118122, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1660682729118187, "dur":328, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Mirror.Components.dll" }}
+,{ "pid":12345, "tid":2, "ts":1660682729118515, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1660682729118569, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":2, "ts":1660682729118643, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1660682729121524, "dur":2830, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/The world of Arffornia_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":2, "ts":1660682729124415, "dur":13189, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1660682729109124, "dur":683, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1660682729109807, "dur":6395, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1660682729116210, "dur":90, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":3, "ts":1660682729116300, "dur":111, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1660682729116413, "dur":33, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":3, "ts":1660682729116446, "dur":87, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1660682729116534, "dur":71, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1660682729116606, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1660682729116669, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1660682729116738, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1660682729116808, "dur":75, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1660682729116883, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1660682729116945, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1660682729117007, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1660682729117064, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1660682729117124, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1660682729117187, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1660682729117240, "dur":133, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1660682729117374, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1660682729117436, "dur":55, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1660682729117492, "dur":220, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":3, "ts":1660682729117712, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1660682729117772, "dur":197, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":3, "ts":1660682729117969, "dur":96, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1660682729118066, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":3, "ts":1660682729118135, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1660682729118200, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/clipper_library.dll" }}
+,{ "pid":12345, "tid":3, "ts":1660682729118269, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1660682729118328, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":3, "ts":1660682729118432, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1660682729119581, "dur":4996, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/The world of Arffornia_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":3, "ts":1660682729124632, "dur":12942, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1660682729109164, "dur":656, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1660682729109820, "dur":6394, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1660682729116218, "dur":95, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":4, "ts":1660682729116313, "dur":108, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1660682729116422, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":4, "ts":1660682729116462, "dur":73, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1660682729116536, "dur":121, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1660682729116657, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1660682729116716, "dur":85, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1660682729116801, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1660682729116862, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1660682729116925, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1660682729116986, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1660682729117044, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1660682729117101, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1660682729117160, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1660682729117218, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1660682729117280, "dur":109, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1660682729117390, "dur":339, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":4, "ts":1660682729117729, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1660682729117781, "dur":198, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Telepathy.dll" }}
+,{ "pid":12345, "tid":4, "ts":1660682729117979, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1660682729118039, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":4, "ts":1660682729118094, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1660682729118153, "dur":362, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Mirror.dll" }}
+,{ "pid":12345, "tid":4, "ts":1660682729118515, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1660682729118574, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":4, "ts":1660682729118644, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1660682729122071, "dur":2234, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/The world of Arffornia_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":4, "ts":1660682729124362, "dur":13219, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1660682729109202, "dur":624, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1660682729109826, "dur":6393, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1660682729116220, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":5, "ts":1660682729116275, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1660682729116350, "dur":20, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":5, "ts":1660682729116370, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1660682729116432, "dur":110, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia.exe" }}
+,{ "pid":12345, "tid":5, "ts":1660682729116542, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1660682729116611, "dur":78, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1660682729116689, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1660682729116755, "dur":132, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1660682729116887, "dur":94, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1660682729116981, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1660682729117039, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1660682729117097, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1660682729117158, "dur":230, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1660682729117389, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1660682729117449, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1660682729117507, "dur":242, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":5, "ts":1660682729117749, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1660682729117813, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":5, "ts":1660682729117871, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1660682729117932, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":5, "ts":1660682729117995, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1660682729118070, "dur":110, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":5, "ts":1660682729118180, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1660682729118251, "dur":224, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":5, "ts":1660682729118475, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1660682729118533, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/level0" }}
+,{ "pid":12345, "tid":5, "ts":1660682729118598, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1660682729121130, "dur":2802, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/The world of Arffornia_Data/level0" }}
+,{ "pid":12345, "tid":5, "ts":1660682729124001, "dur":13586, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1660682729109237, "dur":594, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1660682729109831, "dur":6393, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1660682729116225, "dur":85, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":6, "ts":1660682729116311, "dur":73, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1660682729116385, "dur":19, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":6, "ts":1660682729116404, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1660682729116468, "dur":20, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":6, "ts":1660682729116488, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1660682729116540, "dur":70, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1660682729116611, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1660682729116675, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1660682729116737, "dur":78, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1660682729116815, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1660682729116883, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1660682729116958, "dur":138, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1660682729117096, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1660682729117161, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1660682729117221, "dur":55, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1660682729117277, "dur":117, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1660682729117394, "dur":73, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1660682729117467, "dur":225, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":6, "ts":1660682729117692, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1660682729117743, "dur":194, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":6, "ts":1660682729117938, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1660682729118002, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":6, "ts":1660682729118064, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1660682729118123, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":6, "ts":1660682729118183, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1660682729118252, "dur":65, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":6, "ts":1660682729118422, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1660682729118927, "dur":3348, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/The world of Arffornia_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":6, "ts":1660682729122341, "dur":15257, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1660682729109263, "dur":572, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1660682729109836, "dur":6373, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1660682729116215, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":7, "ts":1660682729116281, "dur":135, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1660682729116417, "dur":34, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":7, "ts":1660682729116451, "dur":85, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1660682729116537, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1660682729116604, "dur":55, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1660682729116660, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1660682729116726, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1660682729116802, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1660682729116866, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1660682729116929, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1660682729116993, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1660682729117044, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1660682729117107, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1660682729117181, "dur":70, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":7, "ts":1660682729117251, "dur":135, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1660682729117387, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1660682729117447, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1660682729117504, "dur":233, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":7, "ts":1660682729117738, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1660682729117800, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":7, "ts":1660682729117862, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1660682729117921, "dur":77, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":7, "ts":1660682729117998, "dur":87, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1660682729118086, "dur":248, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/SimpleWebTransport.dll" }}
+,{ "pid":12345, "tid":7, "ts":1660682729118334, "dur":52, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1660682729118386, "dur":207, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":7, "ts":1660682729118593, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1660682729118645, "dur":137, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/boot.config" }}
+,{ "pid":12345, "tid":7, "ts":1660682729118782, "dur":45, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1660682729118828, "dur":18728, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1660682729109290, "dur":554, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1660682729109844, "dur":6372, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1660682729116226, "dur":109, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":8, "ts":1660682729116336, "dur":213, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1660682729116550, "dur":83, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1660682729116633, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1660682729116693, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1660682729116753, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1660682729116812, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1660682729116874, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1660682729116931, "dur":133, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1660682729117064, "dur":98, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1660682729117162, "dur":65, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1660682729117227, "dur":141, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1660682729117368, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1660682729117433, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1660682729117489, "dur":361, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":8, "ts":1660682729117851, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1660682729117917, "dur":106, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":8, "ts":1660682729118023, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1660682729118088, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":8, "ts":1660682729118141, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1660682729118195, "dur":252, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/kcp2k.dll" }}
+,{ "pid":12345, "tid":8, "ts":1660682729118447, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1660682729118508, "dur":191, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":8, "ts":1660682729118699, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1660682729118760, "dur":18794, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1660682729109333, "dur":518, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1660682729109851, "dur":6369, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1660682729116221, "dur":86, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":9, "ts":1660682729116307, "dur":105, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1660682729116414, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":9, "ts":1660682729116437, "dur":90, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1660682729116528, "dur":77, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1660682729116606, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1660682729116666, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1660682729116725, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1660682729116794, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1660682729116847, "dur":55, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1660682729116902, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1660682729116955, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1660682729117012, "dur":75, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1660682729117087, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1660682729117149, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1660682729117206, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1660682729117258, "dur":138, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1660682729117397, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1660682729117458, "dur":415, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":9, "ts":1660682729117873, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1660682729117935, "dur":70, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":9, "ts":1660682729118006, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1660682729118071, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":9, "ts":1660682729118132, "dur":67, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1660682729118200, "dur":261, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Coffee.SoftMaskForUGUI.dll" }}
+,{ "pid":12345, "tid":9, "ts":1660682729118461, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1660682729118526, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/resources.assets" }}
+,{ "pid":12345, "tid":9, "ts":1660682729118592, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1660682729120347, "dur":4275, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/The world of Arffornia_Data/resources.assets" }}
+,{ "pid":12345, "tid":9, "ts":1660682729124661, "dur":12900, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1660682729109364, "dur":491, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1660682729109855, "dur":6375, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1660682729116231, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":10, "ts":1660682729116272, "dur":113, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1660682729116386, "dur":35, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":10, "ts":1660682729116421, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1660682729116472, "dur":218, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/where-allocations.dll" }}
+,{ "pid":12345, "tid":10, "ts":1660682729116690, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1660682729116745, "dur":411, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":10, "ts":1660682729117157, "dur":66, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1660682729117224, "dur":54, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1660682729117278, "dur":143, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1660682729117422, "dur":616, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":10, "ts":1660682729118038, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1660682729118109, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":10, "ts":1660682729118173, "dur":78, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1660682729118252, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":10, "ts":1660682729118430, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1660682729119142, "dur":18334, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/The world of Arffornia_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":10, "ts":1660682729137519, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
+,{ "pid":12345, "tid":10, "ts":1660682729137520, "dur":0, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1660682729109403, "dur":457, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1660682729109860, "dur":6343, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1660682729116210, "dur":149, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":11, "ts":1660682729116360, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1660682729116425, "dur":48, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":11, "ts":1660682729116473, "dur":93, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1660682729116566, "dur":104, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1660682729116670, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1660682729116734, "dur":83, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1660682729116817, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1660682729116880, "dur":70, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1660682729116950, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1660682729117008, "dur":54, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1660682729117063, "dur":55, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1660682729117118, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1660682729117182, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1660682729117237, "dur":149, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1660682729117386, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1660682729117462, "dur":354, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":11, "ts":1660682729117816, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1660682729117882, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":11, "ts":1660682729117943, "dur":163, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1660682729118106, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":11, "ts":1660682729118175, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1660682729118234, "dur":405, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Cinemachine.dll" }}
+,{ "pid":12345, "tid":11, "ts":1660682729118639, "dur":66, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1660682729118705, "dur":18854, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1660682729109434, "dur":431, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1660682729109865, "dur":6341, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1660682729116210, "dur":148, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":12, "ts":1660682729116358, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1660682729116422, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":12, "ts":1660682729116460, "dur":83, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1660682729116544, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1660682729116613, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1660682729116676, "dur":65, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1660682729116741, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1660682729116804, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1660682729116865, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1660682729116936, "dur":124, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1660682729117061, "dur":187, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1660682729117249, "dur":142, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1660682729117391, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1660682729117463, "dur":395, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":12, "ts":1660682729117859, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1660682729117921, "dur":263, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":12, "ts":1660682729118185, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1660682729118246, "dur":322, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/The world of Arffornia_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":12, "ts":1660682729118573, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1660682729119972, "dur":2339, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/The world of Arffornia_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":12, "ts":1660682729122369, "dur":15223, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1660682729141729, "dur":1468, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid": 0, "tid": 1, "ts": 1660682729157911, "dur": 641, "ph": "X", "name": "backend_profiler0.traceevents", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1660682729157794, "dur": 783, "ph": "X", "name": "Write chrome-trace events", "args": {} },
