@@ -689,12 +689,12 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   maxHealth: 100
-  healthBar: {fileID: 3995618058323226607, guid: e13f6c390c9c74d4499d4d9332f21338,
-    type: 3}
+  playerUI: {fileID: 0}
   disableOnDeath:
   - {fileID: 9059515218701028872}
   - {fileID: 190424490302649992}
   characterController: {fileID: 8741707619534854585}
+  playerSetup: {fileID: 895996424391727265}
 --- !u!114 &190424490302649992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -750,6 +750,9 @@ MonoBehaviour:
   - {fileID: 9059515218701028872}
   remoteLayerName: RemotePlayer
   anim: {fileID: 4834402899435916564}
+  playerUIPrefab: {fileID: 3266229564852084198, guid: e318d4f875b20e842aafbae246238ebb,
+    type: 3}
+  playerUIInstance: {fileID: 0}
 --- !u!95 &4834402899435916564
 Animator:
   serializedVersion: 4

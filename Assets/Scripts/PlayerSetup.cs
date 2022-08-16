@@ -12,10 +12,10 @@ public class PlayerSetup : NetworkBehaviour
     Camera sceneCamera;
 
     [SerializeField] private Animator anim;
-    /*
+    
     [SerializeField] private GameObject playerUIPrefab;
-    private GameObject playerUIInstance;
-    */
+    public GameObject playerUIInstance;
+    
 
     private void Start()
     {
@@ -31,13 +31,15 @@ public class PlayerSetup : NetworkBehaviour
             {
                 sceneCamera.gameObject.SetActive(false);
             }
-
-            //playerUIInstance = Instantiate(playerUIPrefab);
+            //create ui
+            playerUIInstance = Instantiate(playerUIPrefab);
+        
         }
 
         GetComponent<Player>().Setup();
 
     }
+
 
     public override void OnStartClient()
     {
@@ -65,7 +67,7 @@ public class PlayerSetup : NetworkBehaviour
 
     private void OnDisable()
     {
-        //Destroy(playerUIInstance);
+        Destroy(playerUIInstance);
 
         if (sceneCamera != null)
         {

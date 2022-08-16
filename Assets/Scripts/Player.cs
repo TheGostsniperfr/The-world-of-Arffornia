@@ -17,13 +17,14 @@ public class Player : NetworkBehaviour
 
     [SyncVar]
     private int currentHealth;
-    [SerializeField] private HealthBar healthBar;
+    [SerializeField] private PlayerUI playerUI;
 
     [SerializeField]
     private Behaviour[] disableOnDeath;
     private bool[] wasEnabledOnStart;
 
     public CharacterController characterController;
+    [SerializeField] private PlayerSetup playerSetup;
 
     public void Setup()
     {
@@ -34,14 +35,18 @@ public class Player : NetworkBehaviour
         }
 
         SetDefaults();
+
+
     }
 
     public void SetDefaults()
     {
+        playerUI = playerSetup.playerUIInstance.GetComponent<PlayerUI>();
+
         isDead = false;
         currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
-        healthBar.SetHealth(currentHealth);
+        playerUI.SetMaxHealth(maxHealth);
+        playerUI.SetHealth(currentHealth);
 
 
         for (int i = 0; i < disableOnDeath.Length; i++)
@@ -87,7 +92,7 @@ public class Player : NetworkBehaviour
         }
 
         currentHealth -= amount;
-        healthBar.SetHealth(currentHealth);
+        playerUI.SetHealth(currentHealth);
         Debug.Log(transform.name + " a maintenant : " + currentHealth + " points de vies.");
 
 
