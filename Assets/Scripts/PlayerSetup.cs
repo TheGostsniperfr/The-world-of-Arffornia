@@ -15,8 +15,9 @@ public class PlayerSetup : NetworkBehaviour
     
     [SerializeField] private GameObject playerUIPrefab;
     public GameObject playerUIInstance;
-    
 
+
+    
     private void Start()
     {
         if (!isLocalPlayer)
@@ -33,8 +34,9 @@ public class PlayerSetup : NetworkBehaviour
             }
             //create ui
             playerUIInstance = Instantiate(playerUIPrefab);
-        
+
         }
+        
 
         GetComponent<Player>().Setup();
 

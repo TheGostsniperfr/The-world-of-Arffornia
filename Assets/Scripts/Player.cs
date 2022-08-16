@@ -17,7 +17,7 @@ public class Player : NetworkBehaviour
 
     [SyncVar]
     private int currentHealth;
-    [SerializeField] private PlayerUI playerUI;
+    private PlayerUI playerUI;
 
     [SerializeField]
     private Behaviour[] disableOnDeath;
@@ -28,35 +28,53 @@ public class Player : NetworkBehaviour
 
     public void Setup()
     {
+
+        
+
+
         wasEnabledOnStart = new bool[disableOnDeath.Length];
         for (int i = 0; i < disableOnDeath.Length; i++)
         {
             wasEnabledOnStart[i] = disableOnDeath[i].enabled;
         }
+        
 
         SetDefaults();
-
+        
 
     }
 
     public void SetDefaults()
     {
+        
+        
+        
+
+
+            isDead = false;
+            currentHealth = maxHealth;
+            
+
+
+            for (int i = 0; i < disableOnDeath.Length; i++)
+            {
+                disableOnDeath[i].enabled = wasEnabledOnStart[i];
+            }
+        
+
+
         if (isLocalPlayer)
         {
             playerUI = playerSetup.playerUIInstance.GetComponent<PlayerUI>();
+            if (playerUI == null)
+            {
+                Debug.LogError("pas de Player UI");
+            }
+
+            playerUI.SetMaxHealth(currentHealth, maxHealth);
+            playerUI.SetHealth(currentHealth);
+
         }
-
-        isDead = false;
-        currentHealth = maxHealth;
-        playerUI.SetMaxHealth(currentHealth ,maxHealth);
-        playerUI.SetHealth(currentHealth);
-
-
-        for (int i = 0; i < disableOnDeath.Length; i++)
-        {
-            disableOnDeath[i].enabled = wasEnabledOnStart[i];
-        }
-
 
     }
 
@@ -84,6 +102,9 @@ public class Player : NetworkBehaviour
         {
             RpcTakeDamage(100);
         }
+
+        playerUI.SetHealth(currentHealth);
+
     }
 
     [ClientRpc]
@@ -95,7 +116,7 @@ public class Player : NetworkBehaviour
         }
 
         currentHealth -= amount;
-        playerUI.SetHealth(currentHealth);
+
         Debug.Log(transform.name + " a maintenant : " + currentHealth + " points de vies.");
 
 
