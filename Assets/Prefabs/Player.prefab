@@ -721,11 +721,12 @@ MonoBehaviour:
   anim: {fileID: 4834402899435916564}
   netAnim: {fileID: -9189918615910084075}
   playerController: {fileID: 9059515218701028872}
-  aimBot_Range: 5
+  aimBot_Range: 10
   aimBot_ActualTarget: {fileID: 0}
   aimBot_maxEntitiesBeforeLivingTarget: 3
   aimBot_filterTag:
   - Player
+  - test
   targetsList: []
 --- !u!114 &895996424391727265
 MonoBehaviour:

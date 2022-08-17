@@ -85,6 +85,14 @@ public class PlayerAttack : NetworkBehaviour
                 FireBallAttack();
 
             }
+
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+                //reset aimBot focus
+                aimBot_ActualTarget = null;
+                selectTarget();
+                sendTarget();
+            }
         }
     }
 
