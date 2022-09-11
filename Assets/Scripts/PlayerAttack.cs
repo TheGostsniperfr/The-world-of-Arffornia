@@ -2,7 +2,6 @@ using UnityEngine;
 using Mirror;
 using System.Collections.Generic;
 using System.Linq;
-using System;
 
 public class PlayerAttack : NetworkBehaviour
 {
@@ -15,6 +14,7 @@ public class PlayerAttack : NetworkBehaviour
 
 
     //attack with fireball
+    [Header("Fireball")]
     public List<GameObject> vfx = new List<GameObject> ();
     private GameObject effectToSpawn;
 
@@ -24,7 +24,18 @@ public class PlayerAttack : NetworkBehaviour
     private bool fireBallThrow;
 
 
+    //energy bar 
+    [Header("Energy bar")]
+    [SerializeField] private float cuurentEnergyBar = 100f;
+    [SerializeField] private float maxxEnergyBar = 100f;
+    [SerializeField] private float regenEnergyBar = 10f;
+    [SerializeField] private float speedRegenEnergyBar = 1f;
+    [SerializeField] private float cooldownBeforeStartRegenEnergyBar = 3f;
+    [SerializeField] private float attackEnergyCost = 30f;
+
+
     //Animator
+    [Header("Animator")]
     [SerializeField]
     private Animator anim;
     [SerializeField] private NetworkAnimator netAnim;
@@ -33,6 +44,7 @@ public class PlayerAttack : NetworkBehaviour
 
 
     //Player aimbot 
+    [Header("Aimbot")]
     [SerializeField] private PlayerController playerController;
     [SerializeField] private float aimBot_Range = 10;
     [SerializeField] private Collider aimBot_ActualTarget;
@@ -61,9 +73,10 @@ public class PlayerAttack : NetworkBehaviour
             //Check target
             targetsList = targetList();
             aimBot();
+            
 
 
-            if (Input.GetButtonDown("Fire1") && ((timeThrowEffect+cooldownNextAttack) <= Time.time) && characterController.isGrounded)
+            if (Input.GetButtonDown("Fire1") && ((timeThrowEffect+cooldownNextAttack) <= Time.time) && characterController.isGrounded && ((cuurentEnergyBar - attackEnergyCost) >= 0))
             {
 
                 //Attack
@@ -96,6 +109,10 @@ public class PlayerAttack : NetworkBehaviour
         }
     }
 
+    private void energyBar()
+    {
+
+    }
 
     private void aimBot()
     { 

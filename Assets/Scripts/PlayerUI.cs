@@ -5,6 +5,9 @@ using TMPro;
 
 public class PlayerUI : MonoBehaviour
 {
+    //healthBar
+    [Header("Health Bar")]
+
     [SerializeField] private Slider slider;
     [SerializeField] private Gradient gradient;
     [SerializeField] Image fill;
@@ -17,7 +20,18 @@ public class PlayerUI : MonoBehaviour
     [SerializeField] private float newHealth;
 
 
-    //healthBar
+    //Energy bar
+    [Header("Energy Bar")]
+    [SerializeField] private Slider sliderEnergyBar;
+    [SerializeField] private Gradient gradientEnergyBar;
+    [SerializeField] private Image fillEnergyBar;
+    [SerializeField] private TextMeshProUGUI textMeshEnergyBar;
+
+    [SerializeField] private float speedTransitionEnergyBar;
+    [SerializeField] private float timeActualTransitionEnergyBar = 0;
+
+    [SerializeField] private float currentEnergy;
+    [SerializeField] private float newEnergy;
 
     private void Update()
     {
@@ -25,7 +39,13 @@ public class PlayerUI : MonoBehaviour
         {
             HealthTransition();
         }
+        if(currentEnergy != newEnergy)
+        {
+            EnergyTransition();
+        }
     }
+
+    //Health bar 
     public void SetHealth(float _newHealth)
     {
         newHealth = _newHealth;        
@@ -39,8 +59,6 @@ public class PlayerUI : MonoBehaviour
         gradient.Evaluate(1f);
         Debug.Log("setMaxHealth : " + maxHealth);
     }
-
-    
     private void HealthTransition()
     {
         timeActualTransitionHealth += Time.deltaTime * speedTransitionHealth;
@@ -56,4 +74,35 @@ public class PlayerUI : MonoBehaviour
             timeActualTransitionHealth = 0;
         }
     }
-}
+
+    //Energy bar
+    public void SetEnergy(float _newEnergy)
+    {
+        newEnergy = _newEnergy;
+    }
+
+    public void SetMaxEnergy(float currentEnergy, float maxEnergy)
+    {
+        sliderEnergyBar.value = currentEnergy;
+        sliderEnergyBar.maxValue = maxEnergy;
+        currentEnergy = maxEnergy;
+        gradientEnergyBar.Evaluate(1f);
+        Debug.Log("setMaxEnergy" + maxEnergy);
+    }
+
+    private void EnergyTransition()
+    {
+        timeActualTransitionEnergyBar += Time.deltaTime * speedTransitionEnergyBar;
+        sliderEnergyBar.value = Mathf.Lerp(currentEnergy, newEnergy, timeActualTransitionEnergyBar);
+
+        textMeshEnergyBar.text = Mathf.Round(slider.value) + " / " + sliderEnergyBar.maxValue;
+
+        fillEnergyBar.color = gradient.Evaluate(sliderEnergyBar.value / sliderEnergyBar.maxValue);
+
+        if (sliderEnergyBar.value == newEnergy)
+        {
+            currentEnergy = newEnergy;
+            timeActualTransitionEnergyBar = 0;
+        }
+    }
+    }
