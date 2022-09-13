@@ -689,6 +689,13 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   maxHealth: 100
+  curentEnergy: 100
+  maxxEnergyBar: 100
+  regenEnergyBar: 10
+  speedRegenEnergyBar: 1
+  cooldownBeforeStartRegenEnergyBar: 3
+  attackEnergyCost: 30
+  isRegen: 1
   disableOnDeath:
   - {fileID: 9059515218701028872}
   - {fileID: 190424490302649992}
@@ -718,6 +725,9 @@ MonoBehaviour:
   - {fileID: 7584943179759472836, guid: 5747a324918df724cbf8cc9df09e9d05, type: 3}
   timeBeforeThrowEffect: 0.3
   cooldownNextAttack: 0.5
+  player: {fileID: 8993425203013263196}
+  attackEnergyCost: 30
+  timeAfterStartRegen: 2
   anim: {fileID: 4834402899435916564}
   netAnim: {fileID: -9189918615910084075}
   playerController: {fileID: 9059515218701028872}

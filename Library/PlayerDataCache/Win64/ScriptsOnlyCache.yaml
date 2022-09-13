@@ -22,8 +22,6 @@ ScriptsOnlyBuild:
     Mirror.Components.dll:
     - Mirror.NetworkAnimator
     - Mirror.NetworkTransform
-    Mirror.Editor.dll:
-    - Mirror.NetworkBehaviourInspector
     Mirror.dll:
     - Mirror.NetworkIdentity
     - Mirror.NetworkManager
@@ -42,8 +40,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -477,7 +477,7 @@ ScriptsOnlyBuild:
     className: PanelEventHandler
   - hash:
       serializedVersion: 2
-      Hash: 1f8e4640fd64ce90526b22ec9fc6e1ea
+      Hash: afb7ee5f55b33ef77a5ecaee97c7604b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerUI
@@ -1407,7 +1407,7 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 3543c4a823941aa93a72fcc9082afef1
+      Hash: 5a63bd6bc4157100ed761eadcc0fd7db
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerAttack

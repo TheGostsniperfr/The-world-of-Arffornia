@@ -95,9 +95,9 @@ public class PlayerUI : MonoBehaviour
         timeActualTransitionEnergyBar += Time.deltaTime * speedTransitionEnergyBar;
         sliderEnergyBar.value = Mathf.Lerp(currentEnergy, newEnergy, timeActualTransitionEnergyBar);
 
-        textMeshEnergyBar.text = Mathf.Round(slider.value) + " / " + sliderEnergyBar.maxValue;
+        textMeshEnergyBar.text = Mathf.Round(sliderEnergyBar.value) + " / " + sliderEnergyBar.maxValue;
 
-        fillEnergyBar.color = gradient.Evaluate(sliderEnergyBar.value / sliderEnergyBar.maxValue);
+        fillEnergyBar.color = gradientEnergyBar.Evaluate(sliderEnergyBar.value / sliderEnergyBar.maxValue);
 
         if (sliderEnergyBar.value == newEnergy)
         {

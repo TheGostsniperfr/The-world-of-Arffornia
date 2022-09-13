@@ -12,6 +12,7 @@ public class Player : NetworkBehaviour
         protected set { _isDead = value; }
     }
 
+    //Health
     [SerializeField]
     private int maxHealth = 100;
 
@@ -19,6 +20,15 @@ public class Player : NetworkBehaviour
     private float currentHealth;
     private float tempoHealth;
     private PlayerUI playerUI;
+
+    //energy bar 
+    [Header("Energy bar")]
+    [SerializeField] private float curentEnergy = 100f;
+    [SerializeField] private float maxxEnergyBar = 100f;
+    [SerializeField] private float regenEnergyBar = 1f;
+    [SerializeField] private float speedRegenEnergyBar = 1f;
+    [SerializeField] public bool isRegen = true;
+
 
     [SerializeField]
     private Behaviour[] disableOnDeath;
@@ -59,10 +69,25 @@ public class Player : NetworkBehaviour
 
             playerUI.SetMaxHealth(currentHealth, maxHealth);
             playerUI.SetHealth(currentHealth);
+            playerUI.SetMaxEnergy(curentEnergy, maxxEnergyBar);
+            playerUI.SetEnergy(currentHealth);
         }
 
     }
 
+    public bool isEnergySufficient(float attackEnergyCost)
+    {
+        if(curentEnergy - attackEnergyCost >= 0)
+        {
+            curentEnergy -= attackEnergyCost;
+            playerUI.SetEnergy(curentEnergy);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
     private IEnumerator Respawn()
     {
         yield return new WaitForSeconds(GameManager.instance.gameSettings.respawnTimer);
@@ -86,6 +111,19 @@ public class Player : NetworkBehaviour
             if(currentHealth != tempoHealth)
             {
                 playerUI.SetHealth(currentHealth);
+            }
+
+            if (isRegen)
+            {
+                if (curentEnergy + regenEnergyBar <= maxxEnergyBar)
+                {
+                    curentEnergy += regenEnergyBar;
+                    playerUI.SetEnergy(curentEnergy);
+                }
+                else
+                {
+                    curentEnergy = maxxEnergyBar;
+                }
             }
         }
 
