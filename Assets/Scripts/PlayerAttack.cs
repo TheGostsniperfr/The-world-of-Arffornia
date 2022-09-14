@@ -31,8 +31,9 @@ public class PlayerAttack : NetworkBehaviour
     //regen
     [Header("Regen")]
     [SerializeField] private float timeAfterStartRegen = 2f;
+    private float timeLastRegen;
 
-     //Animator
+    //Animator
     [Header("Animator")]
     [SerializeField]
     private Animator anim;
@@ -73,17 +74,21 @@ public class PlayerAttack : NetworkBehaviour
             aimBot();
 
             //check regen
-            if(!player.isRegen && (timeLastAttack + timeAfterStartRegen) <= Time.time)
+            if(!player.isEnergyRegen && (timeLastRegen + timeAfterStartRegen) <= Time.time)
             {
                 Debug.Log("isRegen is turn on true");
-                player.isRegen = true;
+                player.isEnergyRegen = true;
+                timeLastRegen = Time.time;
+
+
+
             }
 
 
 
             if (Input.GetButtonDown("Fire1") && ((timeLastAttack + cooldownNextAttack) <= Time.time) && characterController.isGrounded && player.isEnergySufficient(attackEnergyCost))
             {
-                player.isRegen = false;
+                player.isEnergyRegen = false;
                 
 
 
@@ -94,7 +99,7 @@ public class PlayerAttack : NetworkBehaviour
                 }
                 netAnim.SetTrigger("throwProjectil");
 
-
+                timeLastRegen = Time.time;
                 timeLastAttack = Time.time;
                 fireBallThrow = true;
             }

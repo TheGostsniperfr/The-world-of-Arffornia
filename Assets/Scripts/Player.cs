@@ -27,7 +27,7 @@ public class Player : NetworkBehaviour
     [SerializeField] private float maxxEnergyBar = 100f;
     [SerializeField] private float regenEnergyBar = 1f;
     [SerializeField] private float speedRegenEnergyBar = 1f;
-    [SerializeField] public bool isRegen = true;
+    [SerializeField] public bool isEnergyRegen = true;
 
 
     [SerializeField]
@@ -113,17 +113,19 @@ public class Player : NetworkBehaviour
                 playerUI.SetHealth(currentHealth);
             }
 
-            if (isRegen)
+            if (isEnergyRegen)
             {
+                isEnergyRegen = false;
                 if (curentEnergy + regenEnergyBar <= maxxEnergyBar)
                 {
                     curentEnergy += regenEnergyBar;
-                    playerUI.SetEnergy(curentEnergy);
                 }
                 else
                 {
                     curentEnergy = maxxEnergyBar;
                 }
+                playerUI.SetEnergy(curentEnergy);
+
             }
         }
 

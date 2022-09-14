@@ -691,11 +691,9 @@ MonoBehaviour:
   maxHealth: 100
   curentEnergy: 100
   maxxEnergyBar: 100
-  regenEnergyBar: 10
+  regenEnergyBar: 40
   speedRegenEnergyBar: 1
-  cooldownBeforeStartRegenEnergyBar: 3
-  attackEnergyCost: 30
-  isRegen: 1
+  isEnergyRegen: 1
   disableOnDeath:
   - {fileID: 9059515218701028872}
   - {fileID: 190424490302649992}
